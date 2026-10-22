@@ -1,0 +1,1765 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Javid Gahramanov Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Javid Gahramanov — AI systems, data platforms, business automation and websites. Selected work and services.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%230A0D12'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='28' fill='%23FFA04A'%3EJG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>
+  (function () {
+    var r = document.documentElement, l = null, h = (location.hash || '').slice(1).toLowerCase();
+    if (h === 'ru' || h === 'en') l = h;
+    if (!l) { try { var s = localStorage.getItem('jg-lang'); if (s === 'ru' || s === 'en') l = s; } catch (e) {} }
+    if (!l) { var n = (navigator.language || 'ru').toLowerCase(); l = (n.indexOf('en') === 0) ? 'en' : 'ru'; }
+    r.setAttribute('data-lang', l); r.lang = l; r.className += ' js';
+  })();
+</script>
+<style>
+/* Layout: instrument-panel editorial. A full-bleed live contour field opens the page, case studies read like lab reports
+   (figures with captions, measured results), and one porcelain sheet rises over the dark ground for services. */
+:root {
+  --ink: #0A0D12;          /* page ground, blue-black */
+  --ink-2: #111620;        /* raised surface */
+  --ink-3: #171D29;        /* hover surface */
+  --line: rgba(206, 218, 236, 0.12);
+  --line-strong: rgba(206, 218, 236, 0.24);
+  --porcelain: #E7ECF3;    /* primary text */
+  --mist: #8D98AA;         /* secondary text */
+  --heat: #FFA04A;         /* accent: thermal amber, as on a satellite heat map */
+  --heat-soft: rgba(255, 160, 74, 0.14);
+  --sheet: #E8ECF1;        /* inverted band */
+  --sheet-ink: #0D1219;
+  --sheet-mist: #586273;
+  --sheet-line: rgba(13, 18, 25, 0.12);
+
+  --f-display: "Noto Serif Display", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --f-body: "Onest", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --t-hero: clamp(2.6rem, 6.3vw, 6.9rem);
+  --t-h2: clamp(2.3rem, 5.4vw, 5.2rem);
+  --t-h3: clamp(2.1rem, 4.6vw, 4.4rem);
+  --t-statement: clamp(1.6rem, 3.3vw, 3.1rem);
+  --t-lede: clamp(1.08rem, 1.35vw, 1.3rem);
+  --t-label: 0.72rem;
+
+  --gutter: max(16px, env(safe-area-inset-left, 0px), min(4.2vw, 64px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px), min(4.2vw, 64px));
+  --radius: 14px;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: dark;
+}
+
+:root[data-lang="ru"] [lang="en"],
+:root[data-lang="en"] [lang="ru"] { display: none !important; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--ink); -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+body {
+  margin: 0; background: var(--ink); color: var(--porcelain);
+  font: 400 16px/1.6 var(--f-body); overflow-x: clip;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--ink);
+}
+::selection { background: var(--heat); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+img { display: block; max-width: 100%; height: auto; }
+:focus-visible { outline: 2px solid var(--heat); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3, h4 { margin: 0; font-weight: 400; text-wrap: balance; }
+p { margin: 0; }
+ul, ol, dl, dd { margin: 0; padding: 0; }
+li { list-style: none; }
+em { font-style: italic; }
+
+.wrap {
+  width: 100%; max-width: 1480px; margin-inline: auto;
+  padding-left: var(--gutter); padding-right: var(--gutter-r);
+}
+.label {
+  font: 500 var(--t-label)/1.4 var(--f-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mist);
+}
+.label b { color: var(--porcelain); font-weight: 500; }
+.display { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.02em; line-height: 0.98; }
+.display em { color: var(--heat); font-weight: 300; }
+
+/* split-text masks (built by script) */
+.w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.1em 0.07em 0.16em 0; margin: -0.1em -0.07em -0.16em 0; }
+.wi { display: inline-block; will-change: transform; }
+.ch { display: inline-block; will-change: transform; }
+
+/* ---------- preloader ---------- */
+.preloader {
+  position: fixed; inset: 0; z-index: 100; background: var(--ink-2);
+  display: grid; grid-template-rows: auto 1fr auto; padding-block: calc(28px + env(safe-area-inset-top, 0px)) calc(28px + env(safe-area-inset-bottom, 0px));
+  clip-path: inset(0 0 0 0);
+  animation: pl-failsafe 0.01s linear 6.5s forwards;
+}
+html:not(.js) .preloader { display: none; }
+@keyframes pl-failsafe { to { visibility: hidden; opacity: 0; } }
+.pl-top { display: flex; justify-content: space-between; }
+.pl-name {
+  align-self: end; font-family: var(--f-display); font-weight: 300; font-size: clamp(3rem, 11vw, 11rem);
+  line-height: 0.9; letter-spacing: -0.03em; overflow: hidden; padding-bottom: 0.08em;
+}
+.pl-name span { display: inline-block; animation: pl-rise 1s var(--ease-out) both; }
+.pl-name em { display: inline-block; color: var(--heat); animation: pl-rise 1s var(--ease-out) 0.08s both; }
+@keyframes pl-rise { from { transform: translateY(105%); } }
+.pl-bar { margin-top: 24px; }
+.pl-bar i { display: block; height: 1px; background: var(--porcelain); transform: scaleX(0); transform-origin: left; }
+
+/* ---------- cursor ---------- */
+.cursor { position: fixed; inset: 0 auto auto 0; z-index: 90; pointer-events: none; opacity: 0; transition: opacity .3s; mix-blend-mode: difference; }
+.cursor.on { opacity: 1; }
+.cursor-dot, .cursor-ring { position: absolute; left: 0; top: 0; border-radius: 50%; }
+.cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #fff; }
+.cursor-ring {
+  width: 38px; height: 38px; margin: -19px 0 0 -19px; border: 1px solid rgba(255,255,255,.6);
+  display: grid; place-items: center; transition: width .45s var(--ease-out), height .45s var(--ease-out), margin .45s var(--ease-out), background-color .3s, border-color .3s;
+}
+.cursor.hover .cursor-ring { width: 64px; height: 64px; margin: -32px 0 0 -32px; border-color: #fff; }
+.cursor.label { mix-blend-mode: normal; }
+.cursor.label .cursor-ring { width: 96px; height: 96px; margin: -48px 0 0 -48px; background: var(--heat); border-color: var(--heat); }
+.cursor.label .cursor-dot { opacity: 0; }
+.cursor-label { font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink); opacity: 0; transition: opacity .2s; }
+.cursor.label .cursor-label { opacity: 1; }
+html.has-cursor, html.has-cursor * { cursor: none !important; }
+
+/* ---------- progress + nav ---------- */
+.progress { position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); height: 2px; z-index: 70; background: var(--heat); transform: scaleX(0); transform-origin: left; }
+.nav {
+  position: fixed; inset: 0 0 auto; z-index: 50; padding-top: env(safe-area-inset-top, 0px);
+  transition: transform .6s var(--ease-out), background-color .4s, border-color .4s;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled { background: rgba(10, 13, 18, 0.72); backdrop-filter: blur(16px) saturate(1.3); -webkit-backdrop-filter: blur(16px) saturate(1.3); border-bottom-color: var(--line); }
+.nav.hide { transform: translateY(-110%); }
+.nav-inner { display: flex; align-items: center; gap: 24px; height: 72px; }
+.brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
+.brand-mark {
+  width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center;
+  font: 400 15px/1 var(--f-display); font-style: italic; letter-spacing: -0.02em;
+}
+.brand-name { font-weight: 500; font-size: 15px; letter-spacing: -0.01em; }
+.nav-links { display: flex; gap: 6px; }
+.nav-links a { position: relative; padding: 8px 12px; font-size: 14px; color: var(--mist); transition: color .3s; }
+.nav-links a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 4px; height: 1px; background: var(--heat); transform: scaleX(0); transform-origin: right; transition: transform .5s var(--ease-out); }
+.nav-links a:hover { color: var(--porcelain); }
+.nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.lang { display: flex; border: 1px solid var(--line-strong); border-radius: 999px; padding: 3px; }
+.lang-btn { font: 500 11px/1 var(--f-mono); letter-spacing: .1em; padding: 7px 10px; border-radius: 999px; color: var(--mist); transition: background-color .3s, color .3s; }
+.lang-btn[aria-pressed="true"] { background: var(--porcelain); color: var(--ink); }
+.menu-btn { display: none; font: 500 11px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; padding: 11px 14px; border: 1px solid var(--line-strong); border-radius: 999px; }
+
+.menu {
+  position: fixed; inset: 0; z-index: 45; background: var(--ink-2);
+  padding-block: calc(96px + env(safe-area-inset-top, 0px)) calc(32px + env(safe-area-inset-bottom, 0px));
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.menu nav { display: grid; gap: 4px; }
+.menu nav a { font: 300 clamp(2.6rem, 12vw, 4.5rem)/1.05 var(--f-display); letter-spacing: -0.02em; overflow: hidden; display: block; }
+.menu nav a span { display: inline-block; }
+.menu nav a em { color: var(--heat); }
+
+/* ---------- buttons ---------- */
+.btn {
+  position: relative; display: inline-flex; align-items: center; gap: 12px; overflow: hidden; isolation: isolate;
+  padding: 16px 24px; border-radius: 999px; border: 1px solid var(--line-strong);
+  font-weight: 500; font-size: 15px; line-height: 1; white-space: nowrap; transition: color .5s var(--ease-out), border-color .5s;
+}
+.btn-fill {
+  position: absolute; z-index: -1; left: var(--mx, 50%); top: var(--my, 50%); width: 260%; aspect-ratio: 1; border-radius: 50%;
+  background: var(--porcelain); transform: translate(-50%, -50%) scale(0); transition: transform .7s var(--ease-out);
+}
+.btn:hover .btn-fill { transform: translate(-50%, -50%) scale(1); }
+.btn:hover { color: var(--ink); border-color: var(--porcelain); }
+.btn-primary { background: var(--heat); color: var(--ink); border-color: var(--heat); }
+.btn-primary .btn-fill { background: var(--porcelain); }
+.btn svg { width: 14px; height: 14px; flex: none; transition: transform .6s var(--ease-out); }
+.btn:hover svg { transform: translate(2px, -2px) rotate(0deg); }
+.btn-sm { padding: 11px 18px; font-size: 13.5px; }
+.btn-text, .btn-icon { position: relative; display: inline-flex; }
+
+/* ---------- hero ---------- */
+.hero { position: relative; min-height: min(94svh, 980px); display: flex; flex-direction: column; overflow: hidden; }
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero.no-gl { background:
+  radial-gradient(60% 50% at 72% 48%, rgba(255,160,74,.16), transparent 70%),
+  repeating-radial-gradient(circle at 70% 50%, transparent 0 22px, rgba(206,218,236,.06) 22px 23px), var(--ink); }
+.hero::after { content: ""; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--ink)); pointer-events: none; }
+.hero-content { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: clamp(28px, 4vw, 48px); padding-block: 132px 36px; }
+.hero-top { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.status { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 12px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: 13px; background: rgba(10,13,18,.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--heat); box-shadow: 0 0 0 0 rgba(255,160,74,.6); animation: pulse 2.2s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(255,160,74,0); } 100% { box-shadow: 0 0 0 0 rgba(255,160,74,0); } }
+.hero-title { font: 300 var(--t-hero)/0.98 var(--f-display); letter-spacing: -0.025em; max-width: 19ch; }
+.hero-title em { color: var(--heat); }
+.hero-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px 48px; }
+.hero-sub { max-width: 46ch; font-size: var(--t-lede); line-height: 1.55; color: var(--mist); }
+.hero-sub b { color: var(--porcelain); font-weight: 500; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.hero-meta > div { padding: 18px 20px 0 0; display: grid; gap: 6px; min-width: 0; }
+.hero-meta dt { font: 500 var(--t-label)/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mist); }
+.hero-meta dd { font-size: 14.5px; }
+.hero-meta .fig-note dd { font: 400 12px/1.5 var(--f-mono); color: var(--mist); }
+.scroll-cue { position: absolute; z-index: 2; right: var(--gutter-r); bottom: 40px; display: none; }
+
+/* ---------- ticker ---------- */
+.ticker { border-block: 1px solid var(--line); padding-block: 22px 18px; overflow: hidden; display: grid; gap: 10px; }
+.mq { overflow: hidden; white-space: nowrap; }
+.mq-track { display: inline-flex; will-change: transform; }
+.mq-group { display: inline-flex; align-items: center; }
+.mq-big .mq-group > span { font: 300 italic clamp(2rem, 4.6vw, 4.2rem)/1.1 var(--f-display); letter-spacing: -0.02em; padding-inline: 0.45em; }
+.mq-big .mq-group > i { width: 0.45em; height: 0.45em; font-size: clamp(2rem, 4.6vw, 4.2rem); background: var(--heat); transform: rotate(45deg) scale(.32); flex: none; }
+.mq-small .mq-group > span { font: 400 13px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mist); padding-inline: 18px; }
+.mq-small .mq-group > i { width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong); flex: none; }
+
+/* ---------- sections ---------- */
+.section { padding-block: clamp(96px, 13vw, 180px); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; margin-bottom: clamp(48px, 7vw, 96px); }
+.sec-head .label { display: flex; align-items: center; gap: 12px; }
+.sec-head .label::before { content: ""; width: 28px; height: 1px; background: var(--heat); }
+.sec-title { font: 300 var(--t-h2)/1 var(--f-display); letter-spacing: -0.025em; max-width: 16ch; }
+.sec-title em { color: var(--heat); }
+.sec-lede { max-width: 58ch; color: var(--mist); font-size: var(--t-lede); line-height: 1.55; }
+
+/* approach */
+.statement { font: 300 var(--t-statement)/1.22 var(--f-display); letter-spacing: -0.015em; max-width: 30ch; }
+.statement em { color: var(--heat); }
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: clamp(64px, 8vw, 112px); border-top: 1px solid var(--line); }
+.principle { padding: 28px 28px 8px 0; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.principle + .principle { padding-left: 28px; border-left: 1px solid var(--line); }
+.principle h3 { font: 400 1.45rem/1.2 var(--f-display); letter-spacing: -0.01em; }
+.principle p { color: var(--mist); max-width: 40ch; }
+.proof { display: flex; gap: 10px; align-items: baseline; font: 400 12.5px/1.55 var(--f-mono); color: var(--porcelain); padding-top: 14px; border-top: 1px dashed var(--line); }
+.proof::before { content: "✓"; color: var(--heat); }
+
+.numbers { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 64px); margin-top: clamp(64px, 8vw, 112px); align-items: stretch; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.stat { padding: clamp(22px, 3vw, 36px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; gap: 10px; align-content: space-between; min-height: 190px; }
+.stat b { font: 300 clamp(3rem, 6vw, 5.4rem)/0.95 var(--f-display); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.stat b .unit { color: var(--heat); }
+.stat > span { color: var(--mist); font-size: 14.5px; }
+
+.term { background: var(--ink-2); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.term-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.term-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+.term-bar span { margin-left: 8px; font: 400 12px/1 var(--f-mono); color: var(--mist); }
+.term-body { padding: 20px 20px 22px; font: 400 13px/1.9 var(--f-mono); display: grid; gap: 2px; flex: 1; align-content: start; overflow-x: auto; }
+.term-cmd { color: var(--porcelain); white-space: nowrap; }
+.term-cmd .caret { display: inline-block; width: 8px; height: 15px; background: var(--heat); vertical-align: -2px; margin-left: 2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.term-row { display: grid; grid-template-columns: 19.5ch minmax(40px, 1fr) 6ch; gap: 14px; align-items: center; color: var(--mist); white-space: nowrap; }
+.term-row .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.term-row .bar i { display: block; height: 100%; width: var(--v); background: var(--porcelain); border-radius: 3px; transform-origin: left; }
+.term-row .n { text-align: right; color: var(--porcelain); font-variant-numeric: tabular-nums; }
+.term-row.total { margin-top: 8px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--porcelain); }
+.term-row.total .n { color: var(--heat); }
+.term-foot { margin-top: 10px; color: var(--mist); font-size: 11.5px; line-height: 1.6; white-space: normal; }
+
+/* ---------- work / cases ---------- */
+.work { padding-bottom: clamp(48px, 8vw, 96px); }
+.case { padding-block: clamp(72px, 10vw, 140px); border-top: 1px solid var(--line); display: grid; gap: clamp(36px, 5vw, 72px); }
+.case-head { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 28px 56px; align-items: end; }
+.case-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+.case-meta .tag { font: 500 var(--t-label)/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--line-strong); border-radius: 999px; }
+.case-title { font: 300 var(--t-h3)/0.98 var(--f-display); letter-spacing: -0.025em; }
+.case-lede { font-size: var(--t-lede); line-height: 1.55; color: var(--mist); max-width: 46ch; }
+
+.case-figs { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: end; }
+.fig { margin: 0; min-width: 0; }
+.fig-main { grid-column: 1 / span 9; grid-row: 1; }
+.fig-side { grid-column: 8 / span 5; grid-row: 1; align-self: end; transform: translateY(16%); z-index: 2; }
+.motion .fig-side { transform: none; }
+.case.flip .fig-main { grid-column: 4 / span 9; }
+.case.flip .fig-side { grid-column: 1 / span 5; }
+.case.flip .flow-side .fig-side { grid-column: 1 / span 4; }
+.case-figs.has-side { margin-bottom: 8%; }
+.frame { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--ink-2); border: 1px solid var(--line); }
+.fig-side .frame { box-shadow: 0 40px 80px -20px rgba(0,0,0,.7), 0 0 0 1px var(--line-strong); }
+.chrome { display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 14px; border-bottom: 1px solid var(--line); background: var(--ink-2); position: relative; z-index: 2; }
+.chrome i { width: 9px; height: 9px; border-radius: 50%; background: var(--line-strong); }
+.chrome > span { margin-left: 10px; font: 400 11.5px/1 var(--f-mono); color: var(--mist); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shot { overflow: hidden; }
+.shot img { width: 100%; transform-origin: 50% 50%; will-change: transform; }
+.fig figcaption { margin-top: 12px; font: 400 12px/1.5 var(--f-mono); color: var(--mist); display: flex; gap: 10px; }
+.fig figcaption b { color: var(--porcelain); font-weight: 500; white-space: nowrap; }
+.fig-side figcaption { padding-inline: 4px; }
+.shot.invert img { filter: invert(0.9) hue-rotate(180deg) saturate(1.4) brightness(1.05); }
+
+.case-body { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); gap: clamp(28px, 4vw, 56px); }
+.facts { display: grid; gap: 0; align-content: start; border-top: 1px solid var(--line); }
+.facts > div { display: grid; gap: 6px; padding-block: 16px; border-bottom: 1px solid var(--line); }
+.facts dt { font: 500 var(--t-label)/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mist); }
+.facts dd { font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 400 12px/1 var(--f-mono); padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--porcelain); background: rgba(206,218,236,.03); }
+.built h4, .results h4 { font: 500 var(--t-label)/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mist); margin-bottom: 16px; }
+.challenge { font: 400 1.25rem/1.45 var(--f-display); letter-spacing: -0.005em; margin-bottom: 28px; max-width: 40ch; }
+.built ul { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.built li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding-block: 13px; border-bottom: 1px solid var(--line); color: var(--porcelain); font-size: 15px; line-height: 1.5; }
+.built li::before { content: ""; width: 7px; height: 7px; margin-top: 8px; border: 1px solid var(--heat); transform: rotate(45deg); }
+.results-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.result { padding-block: 18px; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.result b { font: 300 clamp(2.4rem, 3.6vw, 3.4rem)/1 var(--f-display); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.result b .unit { color: var(--heat); }
+.result > span { color: var(--mist); font-size: 14px; line-height: 1.5; }
+.case-note { grid-column: 1 / -1; display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); color: var(--mist); font-size: 14.5px; }
+.case-note::before { content: "i"; flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--heat); color: var(--heat); display: grid; place-items: center; font: italic 400 13px/1 var(--f-display); margin-top: 1px; }
+
+/* pipeline */
+.pipeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 4px; }
+.pipeline .step { display: flex; align-items: center; gap: 8px; min-width: 0; font: 500 10.5px/1.2 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 9px 9px; border: 1px solid var(--line); border-radius: 8px; color: var(--mist); transition: color .5s, border-color .5s, background-color .5s; }
+.pipeline .step i { font-style: normal; color: var(--line-strong); transition: color .5s; }
+.pipeline .step > span { overflow: hidden; text-overflow: ellipsis; }
+.pipeline .step.on { color: var(--porcelain); border-color: rgba(255,160,74,.55); background: var(--heat-soft); }
+.pipeline .step.on i { color: var(--heat); }
+.pipeline .step.final.on { color: var(--ink); background: var(--heat); border-color: var(--heat); }
+.pipeline .step.final.on i { color: var(--ink); }
+
+.flow { display: grid; gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); overflow: hidden; }
+.flow-step { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; align-items: start; padding: 18px 20px; border-bottom: 1px solid var(--line); position: relative; }
+.flow-step:last-child { border-bottom: 0; }
+.flow-step .k { font: 400 12px/1 var(--f-mono); color: var(--mist); padding-top: 5px; transition: color .5s; }
+.flow-step b { display: block; font: 400 1.2rem/1.25 var(--f-display); margin-bottom: 4px; }
+.flow-step div > span { color: var(--mist); font-size: 14px; }
+.flow-step::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--heat); transform: scaleY(0); transform-origin: top; transition: transform .7s var(--ease-out); }
+.flow-step.on::before { transform: scaleY(1); }
+.flow-step.on .k { color: var(--heat); }
+
+/* case navigator */
+.case-nav {
+  position: fixed; z-index: 40; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 140%); opacity: 0; transition: transform .7s var(--ease-out), opacity .5s;
+  display: flex; align-items: center; gap: 16px; padding: 10px 12px 10px 18px; border-radius: 999px;
+  background: rgba(17, 22, 32, 0.78); border: 1px solid var(--line-strong); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.case-nav.visible { transform: translate(-50%, 0); opacity: 1; }
+.cn-count { font: 500 11px/1 var(--f-mono); letter-spacing: .1em; color: var(--heat); }
+.cn-name { font-size: 14px; font-weight: 500; min-width: 15ch; }
+.cn-dots { display: flex; gap: 4px; }
+.cn-dots button { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; }
+.cn-dots button::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong); transition: background-color .3s, transform .3s; }
+.cn-dots button.on::before { background: var(--porcelain); transform: scale(1.35); }
+
+/* ---------- more projects ---------- */
+.more { padding-block: clamp(48px, 8vw, 96px) clamp(96px, 13vw, 180px); }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.card {
+  position: relative; display: flex; flex-direction: column; gap: 18px; padding: 26px; min-width: 0;
+  background: var(--ink-2); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  transform-style: preserve-3d; will-change: transform;
+}
+.card::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 0%), rgba(255,160,74,.10), transparent 60%);
+}
+.card:hover::after { opacity: 1; }
+.card .tag { align-self: flex-start; font: 500 var(--t-label)/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mist); }
+.card h3 { font: 300 clamp(2rem, 2.8vw, 2.6rem)/1 var(--f-display); letter-spacing: -0.02em; }
+.card > p { color: var(--mist); font-size: 15px; }
+.card ul { display: grid; gap: 9px; font-size: 14.5px; }
+.card li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 10px; }
+.card li::before { content: ""; width: 5px; height: 5px; margin-top: 9px; background: var(--heat); transform: rotate(45deg); }
+.card-foot { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.card-foot .tests { margin-left: auto; font: 400 12px/1 var(--f-mono); color: var(--heat); }
+.bench { border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 12px; background: var(--ink); }
+.bench-row { display: grid; grid-template-columns: 92px minmax(0, 1fr) 62px; gap: 12px; align-items: center; font: 400 12px/1.2 var(--f-mono); }
+.bench-row .m { color: var(--porcelain); }
+.bench-row .m small { display: block; color: var(--mist); font-size: 10.5px; margin-top: 3px; }
+.bench-row .bar { height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.bench-row .bar i { display: block; height: 100%; width: var(--v); background: var(--porcelain); border-radius: 4px; transform-origin: left; }
+.bench-row.pick .bar i { background: var(--heat); }
+.bench-row .v { text-align: right; color: var(--porcelain); font-variant-numeric: tabular-nums; }
+.bench-cap { font: 400 11px/1.5 var(--f-mono); color: var(--mist); }
+.mini-flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: var(--ink); font: 400 11.5px/1.3 var(--f-mono); }
+.mini-flow .col { display: grid; gap: 6px; }
+.mini-flow .col > span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; color: var(--mist); text-align: center; }
+.mini-flow .core { padding: 14px 10px; border: 1px solid var(--heat); border-radius: 10px; color: var(--porcelain); text-align: center; background: var(--heat-soft); }
+.mini-flow .core small { display: block; color: var(--mist); margin-top: 4px; font-size: 10px; }
+.card .fig { margin-top: 2px; }
+.card .fig .frame { border-radius: 10px; }
+
+/* ---------- web gallery ---------- */
+.web { position: relative; background: var(--ink); }
+.web-inner { transform-origin: 50% 100%; }
+.web-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; padding-top: clamp(96px, 12vw, 160px); }
+.web-track {
+  display: flex; gap: 20px; padding: 48px var(--gutter-r) 32px var(--gutter);
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.web-track::-webkit-scrollbar { display: none; }
+.web-track { scroll-padding-inline: var(--gutter) var(--gutter-r); }
+.web-card { position: relative; flex: none; width: min(82vw, 720px); scroll-snap-align: start; display: grid; gap: 16px; }
+.web-card .frame { aspect-ratio: 16 / 10; }
+.web-card .shot { height: 100%; }
+.web-card .shot img { height: 100%; object-fit: cover; }
+.web-card .frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,13,18,.5), transparent 45%); opacity: 0; transition: opacity .5s; }
+.web-card:hover .frame::after { opacity: 1; }
+.web-meta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 18px; align-items: baseline; }
+.web-meta b { font: 300 clamp(1.6rem, 2.4vw, 2.2rem)/1.05 var(--f-display); letter-spacing: -0.015em; }
+.web-meta .open {
+  position: absolute; z-index: 3; top: 14px; right: 14px; padding: 9px 13px; border-radius: 999px;
+  font: 500 10.5px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--porcelain);
+  background: rgba(10, 13, 18, 0.62); border: 1px solid var(--line-strong); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  transition: background-color .4s, color .4s, border-color .4s;
+}
+.web-card:hover .web-meta .open { background: var(--heat); color: var(--ink); border-color: var(--heat); }
+.web-meta > span:not(.open) { grid-column: 1 / -1; color: var(--mist); font-size: 14.5px; }
+.web-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding-bottom: clamp(72px, 9vw, 120px); }
+.web-progress { flex: 1; min-width: 120px; height: 1px; background: var(--line); }
+.web-progress i { display: block; height: 100%; background: var(--heat); transform: scaleX(0); transform-origin: left; }
+.web-count { font: 500 12px/1 var(--f-mono); letter-spacing: .1em; color: var(--mist); font-variant-numeric: tabular-nums; }
+.web-count b { color: var(--porcelain); font-weight: 500; }
+.web.is-pinned .web-inner { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.web.is-pinned .web-head { padding-top: 84px; }
+.web.is-pinned .web-track { overflow: visible; scroll-snap-type: none; width: max-content; padding-block: 32px 22px; }
+.web.is-pinned .web-card { width: max(380px, min(44vw, calc((100vh - 410px) * 1.6))); }
+.web.is-pinned .web-card .shot img { transform: scale(1.08); }
+.web.is-pinned .web-foot { padding-bottom: 28px; }
+
+/* ---------- services sheet ---------- */
+.sheet { position: relative; z-index: 3; background: var(--sheet); color: var(--sheet-ink); border-radius: 32px 32px 0 0; }
+.sheet .label { color: var(--sheet-mist); }
+.sheet .sec-head .label::before { background: var(--sheet-ink); }
+.sheet .sec-title em { color: var(--sheet-ink); font-style: italic; }
+.sheet .sec-lede { color: var(--sheet-mist); }
+.svc-list { border-top: 1px solid var(--sheet-line); position: relative; }
+.svc { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 2fr); gap: 16px 40px; align-items: baseline; padding-block: 30px; border-bottom: 1px solid var(--sheet-line); isolation: isolate; }
+.svc::before { content: ""; position: absolute; inset: 0 calc(-1 * var(--gutter)); z-index: -1; background: var(--sheet-ink); transform: scaleY(0); transform-origin: bottom; transition: transform .6s var(--ease-out); }
+.svc h3 { font: 300 clamp(1.7rem, 3vw, 2.7rem)/1.05 var(--f-display); letter-spacing: -0.02em; transition: transform .6s var(--ease-out), color .4s; }
+.svc p { color: var(--sheet-mist); font-size: 15.5px; max-width: 48ch; transition: color .4s; }
+.svc .ref { justify-self: end; text-align: right; font: 400 11.5px/1.5 var(--f-mono); letter-spacing: .04em; color: var(--sheet-mist); transition: color .4s; }
+@media (hover: hover) {
+  .svc:hover::before { transform: scaleY(1); transform-origin: top; }
+  .svc:hover h3 { transform: translateX(18px); color: var(--sheet); }
+  .svc:hover p, .svc:hover .ref { color: rgba(232,236,241,.72); }
+}
+.svc-preview { position: fixed; left: 0; top: 0; z-index: 30; width: 300px; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; pointer-events: none; opacity: 0; transform: scale(.6); box-shadow: 0 30px 60px -10px rgba(0,0,0,.45); background: var(--ink-2); }
+.svc-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; opacity: 0; transition: opacity .35s; }
+.svc-preview img.on { opacity: 1; }
+
+.process { margin-top: clamp(96px, 12vw, 160px); }
+.proc-grid { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; padding-top: 44px; }
+.proc-line { position: absolute; left: 0; right: 0; top: 0; height: 1px; background: var(--sheet-line); }
+.proc-line i { position: absolute; inset: 0; background: var(--sheet-ink); transform: scaleX(var(--p, 0)); transform-origin: left; }
+.proc { position: relative; display: grid; gap: 12px; align-content: start; }
+.proc::before { content: ""; position: absolute; top: -50px; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--sheet); border: 1px solid var(--sheet-mist); transition: background-color .4s, border-color .4s, transform .4s; }
+.proc.on::before { background: var(--sheet-ink); border-color: var(--sheet-ink); transform: scale(1.25); }
+.proc .k { font: 500 12px/1 var(--f-mono); letter-spacing: .12em; color: var(--sheet-mist); }
+.proc h3 { font: 400 1.6rem/1.15 var(--f-display); letter-spacing: -0.01em; }
+.proc p { color: var(--sheet-mist); font-size: 15px; }
+
+/* ---------- stack ---------- */
+.stack-list { border-top: 1px solid var(--line); }
+.stack-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 16px 40px; padding-block: 22px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.stack-row h3 { font: 400 1.3rem/1.2 var(--f-display); }
+.stack-row .chips { gap: 8px; }
+.stack-row .chip { font-size: 12.5px; padding: 9px 13px; }
+
+/* ---------- contact ---------- */
+.contact { position: relative; overflow: hidden; }
+.contact-title { font: 300 clamp(3rem, 9vw, 9.4rem)/0.95 var(--f-display); letter-spacing: -0.03em; max-width: 12ch; }
+.contact-title em { color: var(--heat); }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px 64px; margin-top: clamp(48px, 6vw, 80px); align-items: end; }
+.contact-copy p { color: var(--mist); font-size: var(--t-lede); line-height: 1.55; max-width: 44ch; }
+.channels { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 14px; }
+.channel { display: grid; gap: 14px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--ink-2); min-width: 0; transition: border-color .4s; }
+.channel:hover { border-color: var(--line-strong); }
+.channel .label { display: flex; justify-content: space-between; align-items: center; }
+.channel .val { font: 400 clamp(1.15rem, 1.65vw, 1.55rem)/1.25 var(--f-display); overflow-wrap: anywhere; user-select: all; }
+.channel a.val { transition: color .3s; }
+.channel a.val:hover { color: var(--heat); }
+.channel .val.placeholder { color: var(--mist); font-style: italic; }
+.copy { font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; padding: 9px 12px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--porcelain); transition: background-color .3s, color .3s; }
+.copy:hover { background: var(--porcelain); color: var(--ink); }
+.copy[disabled] { opacity: .4; pointer-events: none; }
+.contact-cta { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- footer ---------- */
+.footer { border-top: 1px solid var(--line); padding-block: 40px calc(28px + env(safe-area-inset-bottom, 0px)); overflow: hidden; }
+.foot-name { font: 300 clamp(2.4rem, 10.2vw, 11.6rem)/0.9 var(--f-display); letter-spacing: -0.04em; white-space: nowrap; overflow: hidden; padding-bottom: 0.06em; }
+.foot-name em { color: var(--heat); }
+.foot-row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; margin-top: 28px; font: 400 12px/1.5 var(--f-mono); color: var(--mist); letter-spacing: .04em; }
+.foot-row a:hover { color: var(--porcelain); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .case-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .case-body .results { grid-column: 1 / -1; }
+  .results-list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px; }
+  .cards { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .cards .card:last-child { grid-column: 1 / -1; }
+  .numbers { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 900px) {
+  .nav-links, .nav-right .btn-sm { display: none; }
+  .menu-btn { display: inline-flex; }
+  .hero-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-meta > div:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 18px; }
+  .case-head { grid-template-columns: minmax(0, 1fr); }
+  .case-figs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin-bottom: 0 !important; }
+  .fig-main, .fig-side, .case.flip .fig-main, .case.flip .fig-side, .case.flip .flow-side .fig-side { grid-column: 1; grid-row: auto; transform: none; }
+  .fig-side { width: 88%; justify-self: end; margin-top: -12%; }
+  .case.flip .fig-side { justify-self: start; }
+  .principles { grid-template-columns: minmax(0, 1fr); }
+  .principle, .principle + .principle { padding: 24px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .svc { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .svc .ref { justify-self: start; text-align: left; }
+  .proc-grid { grid-template-columns: minmax(0, 1fr); padding-top: 0; padding-left: 36px; gap: 36px; }
+  .proc-line { left: 5px; right: auto; top: 6px; bottom: 6px; width: 1px; height: auto; }
+  .proc-line i { transform: scaleY(var(--p, 0)); transform-origin: top; }
+  .proc::before { top: 6px; left: -36px; }
+  .stack-row { grid-template-columns: minmax(0, 1fr); }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .channels { grid-template-columns: minmax(0, 1fr); }
+  .case-nav { display: none; }
+}
+@media (max-width: 640px) {
+  .nav-inner { height: 64px; gap: 12px; }
+  .brand-name { display: none; }
+  .hero-content { padding-block: 110px 28px; }
+  .hero-meta { grid-template-columns: minmax(0, 1fr); }
+  .hero-meta > div:nth-child(n+2) { border-top: 1px solid var(--line); margin-top: 14px; }
+  .hero-meta .fig-note { display: none; }
+  .case-body { grid-template-columns: minmax(0, 1fr); }
+  .results-list { grid-template-columns: minmax(0, 1fr); }
+  .cards { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .stat { min-height: 150px; padding: 18px; }
+  .term-row { grid-template-columns: 19.5ch minmax(30px, 1fr) 5ch; gap: 10px; }
+  .term-body { font-size: 11px; padding: 16px; }
+  .sheet { border-radius: 22px 22px 0 0; }
+  .btn { padding: 15px 20px; }
+  .bench-row { grid-template-columns: 84px minmax(0, 1fr) 56px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  .preloader { display: none; }
+}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://n8dfmjcz5b-art.github.io/portfolio/">
+<meta property="og:title" content="Джавид Гахраманов — ИИ-системы, автоматизация и сайты">
+<meta property="og:description" content="Портфолио: 8 проектов от идеи до продукта. ИИ-ассистенты, аналитика данных, автоматизация бизнеса и сайты с 3D.">
+<meta property="og:image" content="https://n8dfmjcz5b-art.github.io/portfolio/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0D12">
+</head>
+<body>
+<div class="preloader" aria-hidden="true">
+  <div class="pl-top wrap"><span class="label">Portfolio · 2026</span><span class="label pl-num">000</span></div>
+  <div class="wrap"><div class="pl-name"><span>Javid</span> <em>Gahramanov</em></div><div class="pl-bar"><i></i></div></div>
+  <div></div>
+</div>
+
+<div class="cursor" aria-hidden="true"><div class="cursor-ring"><span class="cursor-label"></span></div><div class="cursor-dot"></div></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner wrap">
+    <a href="#top" class="brand"><span class="brand-mark">JG</span><span class="brand-name"><span lang="ru">Джавид Гахраманов</span><span lang="en">Javid Gahramanov</span></span></a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work"><span lang="ru">Работы</span><span lang="en">Work</span></a>
+      <a href="#web"><span lang="ru">Веб</span><span lang="en">Web</span></a>
+      <a href="#services"><span lang="ru">Услуги</span><span lang="en">Services</span></a>
+      <a href="#contact"><span lang="ru">Контакты</span><span lang="en">Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang-btn" type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+        <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-sm btn-primary" data-magnetic><span class="btn-fill"></span><span class="btn-text"><span lang="ru">Обсудить проект</span><span lang="en">Start a project</span></span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span lang="ru">Меню</span><span lang="en">Menu</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="wrap" aria-label="Menu">
+    <a href="#work"><span><span lang="ru">Работы</span><span lang="en">Work</span></span></a>
+    <a href="#web"><span><span lang="ru">Веб-концепты</span><span lang="en">Web concepts</span></span></a>
+    <a href="#services"><span><span lang="ru">Услуги</span><span lang="en">Services</span></span></a>
+    <a href="#contact"><span><em><span lang="ru">Контакты</span><span lang="en">Contact</span></em></span></a>
+  </nav>
+  <div class="wrap label">Javid Gahramanov · 2026</div>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content wrap">
+      <div class="hero-top" data-hero-fade>
+        <span class="status"><i></i><span lang="ru">Открыт для проектов · удалённо</span><span lang="en">Available for projects · remote</span></span>
+        <span class="label"><span lang="ru">ИИ-системы · данные · автоматизация · веб</span><span lang="en">AI systems · data · automation · web</span></span>
+      </div>
+      <h1 class="hero-title" data-hero-title><span lang="ru">Создаю ИИ-системы, которые <em>работают</em> на ваш бизнес</span><span lang="en">I build AI systems that <em>do real work</em> for your business</span></h1>
+      <div class="hero-row">
+        <p class="hero-sub" data-hero-fade><span lang="ru"><b>Полный цикл в одних руках:</b> данные, модели, бэкенд, интерфейс и тесты. На выходе работающий продукт, а не демо на один показ.</span><span lang="en"><b>The full cycle in one pair of hands:</b> data, models, backend, interface and tests. You get a working product, not a one-off demo.</span></p>
+        <div class="hero-ctas" data-hero-fade>
+          <a class="btn btn-primary" href="#work" data-magnetic><span class="btn-fill"></span><span class="btn-text"><span lang="ru">Смотреть работы</span><span lang="en">See the work</span></span><svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v12M1.5 7.5 7 13l5.5-5.5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+          <a class="btn" href="#contact" data-magnetic><span class="btn-fill"></span><span class="btn-text"><span lang="ru">Обсудить задачу</span><span lang="en">Discuss a project</span></span><svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M4.5 3H11v6.5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        </div>
+      </div>
+      <dl class="hero-meta">
+        <div><dt><span lang="ru">Фокус</span><span lang="en">Focus</span></dt><dd><span lang="ru">ИИ-ассистенты, аналитика, автоматизация</span><span lang="en">AI assistants, analytics, automation</span></dd></div>
+        <div><dt><span lang="ru">Стек</span><span lang="en">Stack</span></dt><dd>Python · TypeScript · FastAPI · React</dd></div>
+        <div><dt><span lang="ru">Формат</span><span lang="en">Format</span></dt><dd><span lang="ru">От брифа до запуска и поддержки</span><span lang="en">From brief to launch and support</span></dd></div>
+        <div class="fig-note"><dt>fig. 0</dt><dd><span lang="ru">Поле сигналов, WebGL в реальном времени. Наведите курсор.</span><span lang="en">Signal field, real-time WebGL. Move your cursor.</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <section class="ticker" aria-label="Directions">
+    <div class="mq mq-big" data-speed="0.55">
+      <div class="mq-track">
+        <div class="mq-group">
+          <span><span lang="ru">ИИ-ассистенты</span><span lang="en">AI assistants</span></span><i></i>
+          <span><span lang="ru">Аналитика данных</span><span lang="en">Data analytics</span></span><i></i>
+          <span><span lang="ru">Автоматизация бизнеса</span><span lang="en">Business automation</span></span><i></i>
+          <span><span lang="ru">Расследования и OSINT</span><span lang="en">Investigations &amp; OSINT</span></span><i></i>
+          <span><span lang="ru">Спутниковый мониторинг</span><span lang="en">Satellite monitoring</span></span><i></i>
+          <span><span lang="ru">Сайты с 3D</span><span lang="en">3D websites</span></span><i></i>
+        </div>
+        <div class="mq-group" aria-hidden="true">
+          <span><span lang="ru">ИИ-ассистенты</span><span lang="en">AI assistants</span></span><i></i>
+          <span><span lang="ru">Аналитика данных</span><span lang="en">Data analytics</span></span><i></i>
+          <span><span lang="ru">Автоматизация бизнеса</span><span lang="en">Business automation</span></span><i></i>
+          <span><span lang="ru">Расследования и OSINT</span><span lang="en">Investigations &amp; OSINT</span></span><i></i>
+          <span><span lang="ru">Спутниковый мониторинг</span><span lang="en">Satellite monitoring</span></span><i></i>
+          <span><span lang="ru">Сайты с 3D</span><span lang="en">3D websites</span></span><i></i>
+        </div>
+      </div>
+    </div>
+    <div class="mq mq-small" data-speed="0.4" data-dir="right">
+      <div class="mq-track">
+        <div class="mq-group"><span>Python</span><i></i><span>TypeScript</span><i></i><span>FastAPI</span><i></i><span>React 19</span><i></i><span>Next.js 16</span><i></i><span>DuckDB</span><i></i><span>SQLite FTS5</span><i></i><span>llama.cpp</span><i></i><span>Ollama</span><i></i><span>QLoRA</span><i></i><span>Telegram Bot API</span><i></i><span>Three.js</span><i></i><span>WebGL</span><i></i><span>Playwright</span><i></i><span>NASA FIRMS</span><i></i><span>Binance API</span><i></i></div>
+        <div class="mq-group" aria-hidden="true"><span>Python</span><i></i><span>TypeScript</span><i></i><span>FastAPI</span><i></i><span>React 19</span><i></i><span>Next.js 16</span><i></i><span>DuckDB</span><i></i><span>SQLite FTS5</span><i></i><span>llama.cpp</span><i></i><span>Ollama</span><i></i><span>QLoRA</span><i></i><span>Telegram Bot API</span><i></i><span>Three.js</span><i></i><span>WebGL</span><i></i><span>Playwright</span><i></i><span>NASA FIRMS</span><i></i><span>Binance API</span><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="section approach" id="approach">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span lang="ru">Подход</span><span lang="en">Approach</span></span></div>
+      <p class="statement" data-scrub><span lang="ru">Я строю системы, которым можно доверять. Каждое число прослеживается до <em>источника</em>, каждый этап закрывается тестами, а данные остаются у владельца.</span><span lang="en">I build systems you can trust. Every number traces back to its <em>source</em>, every stage closes with tests, and the data stays with its owner.</span></p>
+
+      <div class="principles">
+        <div class="principle" data-reveal>
+          <h3><span lang="ru">Сначала доказательства</span><span lang="en">Evidence first</span></h3>
+          <p><span lang="ru">Нет данных, значит так и пишу, а не рисую ноль. Отрицательный результат тоже результат.</span><span lang="en">If there is no data, I say so instead of drawing a zero. A negative result is still a result.</span></p>
+          <div class="proof"><span lang="ru">Из 376 моделей проверку прошли 9, и это сказано в отчёте.</span><span lang="en">Of 376 models, 9 passed validation, and the report says so.</span></div>
+        </div>
+        <div class="principle" data-reveal>
+          <h3><span lang="ru">Всё проверяется</span><span lang="en">Everything is tested</span></h3>
+          <p><span lang="ru">Этап готов, когда прошёл тесты и запуск на реальных данных.</span><span lang="en">A stage is done when it passes its tests and a run on real data.</span></p>
+          <div class="proof"><span lang="ru">3 600+ автотестов в семи проектах.</span><span lang="en">3,600+ automated tests across seven projects.</span></div>
+        </div>
+        <div class="principle" data-reveal>
+          <h3><span lang="ru">Приватность по умолчанию</span><span lang="en">Private by default</span></h3>
+          <p><span lang="ru">Данные остаются у пользователя. Наружу уходит только то, что он сам запустил.</span><span lang="en">Data stays with the user. Only what they choose to run ever leaves the machine.</span></p>
+          <div class="proof"><span lang="ru">CASETRACE и LocalMind работают только на 127.0.0.1.</span><span lang="en">CASETRACE and LocalMind listen on 127.0.0.1 only.</span></div>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div class="stats">
+          <div class="stat" data-reveal><b><span class="num" data-count="8">8</span></b><span><span lang="ru">проектов от идеи до продукта</span><span lang="en">projects, idea to product</span></span></div>
+          <div class="stat" data-reveal><b><span class="num" data-count="253">253</span><span class="unit">k+</span></b><span><span lang="ru">строк кода: Python 223k, TypeScript 30k</span><span lang="en">lines of code: Python 223k, TypeScript 30k</span></span></div>
+          <div class="stat" data-reveal><b><span class="num" data-count="3600">3 600</span><span class="unit">+</span></b><span><span lang="ru">автотестов, включая e2e на Playwright</span><span lang="en">automated tests, Playwright e2e included</span></span></div>
+          <div class="stat" data-reveal><b><span class="num" data-count="376">376</span></b><span><span lang="ru">ML-моделей в одной системе</span><span lang="en">ML models in one system</span></span></div>
+        </div>
+        <div class="term" data-reveal>
+          <div class="term-bar"><i></i><i></i><i></i><span>~/portfolio</span></div>
+          <div class="term-body" data-term>
+            <div class="term-cmd">$ <span class="typed" data-text="tests --count --all">tests --count --all</span><span class="caret"></span></div>
+            <div class="term-row"><span>market-intelligence</span><span class="bar"><i style="--v:100%"></i></span><span class="n" data-count="3035">3 035</span></div>
+            <div class="term-row"><span>localmind</span><span class="bar"><i style="--v:22.8%"></i></span><span class="n" data-count="158">158</span></div>
+            <div class="term-row"><span>groundwatch-ai</span><span class="bar"><i style="--v:22.1%"></i></span><span class="n" data-count="148">148</span></div>
+            <div class="term-row"><span>casetrace</span><span class="bar"><i style="--v:21.3%"></i></span><span class="n" data-count="137">137</span></div>
+            <div class="term-row"><span>brief-ai</span><span class="bar"><i style="--v:15%"></i></span><span class="n" data-count="68">68</span></div>
+            <div class="term-row"><span>instagram-agent</span><span class="bar"><i style="--v:13.9%"></i></span><span class="n" data-count="58">58</span></div>
+            <div class="term-row"><span>evolution-sandbox</span><span class="bar"><i style="--v:11.2%"></i></span><span class="n" data-count="38">38</span></div>
+            <div class="term-row total"><span><span lang="ru">итого</span><span lang="en">total</span></span><span></span><span class="n" data-count="3642">3 642</span></div>
+            <div class="term-foot"><span lang="ru">Шкала полос: √n, иначе маленькие проекты не видны рядом с 3 035.</span><span lang="en">Bar scale: √n, otherwise the small projects vanish next to 3,035.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label"><span lang="ru">Избранные работы</span><span lang="en">Selected work</span></span>
+        <h2 class="sec-title" data-split><span lang="ru">Что я <em>построил</em></span><span lang="en">What I have <em>built</em></span></h2>
+        <p class="sec-lede" data-reveal><span lang="ru">Каждый проект сделан мной целиком: архитектура, бэкенд, ML, интерфейс и тесты. Все цифры взяты из самих проектов.</span><span lang="en">I built each project end to end: architecture, backend, ML, interface and tests. Every number comes from the projects themselves.</span></p>
+      </div>
+
+      <!-- Market Intelligence -->
+      <article class="case" id="case-mi" data-case="Market Intelligence AI">
+        <header class="case-head">
+          <div class="case-meta" data-reveal><span class="tag"><span lang="ru">ИИ и данные</span><span lang="en">AI &amp; data</span></span><span class="label">2026 · <span lang="ru">20 фаз разработки</span><span lang="en">20 development phases</span></span></div>
+          <h3 class="case-title" data-split>Market Intelligence AI</h3>
+          <p class="case-lede" data-reveal><span lang="ru">Исследовательская платформа анализа рынков: 376 моделей-экспертов, Meta-AI над ними и система, которая сама проверяет собственные прогнозы.</span><span lang="en">A market research platform: 376 specialist models, a Meta-AI on top of them, and a system that audits its own forecasts.</span></p>
+        </header>
+        <div class="case-figs has-side">
+          <figure class="fig fig-main">
+            <div class="frame"><div class="chrome"><i></i><i></i><i></i><span>market-intelligence · local instance</span></div><div class="shot"><img src="img/mi_market.jpg" width="1357" height="763" alt="Market terminal with live Binance candles and AI forecast markers" loading="lazy"></div></div>
+            <figcaption><b>fig. 1</b><span><span lang="ru">Терминал рынка: живые свечи Binance, режимы и прогнозы ИИ</span><span lang="en">Market terminal: live Binance candles, regimes and AI forecasts</span></span></figcaption>
+          </figure>
+          <figure class="fig fig-side" data-speed="1">
+            <div class="frame"><div class="shot"><img src="img/mi_brain.jpg" width="1270" height="714" alt="AI Brain view showing a stored prediction and its inputs" loading="lazy"></div></div>
+            <figcaption><b>fig. 2</b><span><span lang="ru">«AI Brain»: каждая цифра привязана к записи прогноза</span><span lang="en">"AI Brain": every figure is tied to a stored forecast</span></span></figcaption>
+          </figure>
+        </div>
+        <div class="case-body">
+          <dl class="facts" data-reveal>
+            <div><dt><span lang="ru">Роль</span><span lang="en">Role</span></dt><dd><span lang="ru">Всё: архитектура, данные, ML, бэкенд, фронтенд, тесты</span><span lang="en">Everything: architecture, data, ML, backend, frontend, tests</span></dd></div>
+            <div><dt><span lang="ru">Масштаб</span><span lang="en">Scale</span></dt><dd><span lang="ru">20 фаз · 192 тыс. строк · 3 035 тестов</span><span lang="en">20 phases · 192k lines · 3,035 tests</span></dd></div>
+            <div><dt><span lang="ru">Стек</span><span lang="en">Stack</span></dt><dd class="chips"><span class="chip">Python</span><span class="chip">DuckDB</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Binance API</span><span class="chip">GDELT</span><span class="chip">LLM</span></dd></div>
+          </dl>
+          <div class="built" data-reveal>
+            <h4><span lang="ru">Задача</span><span lang="en">Challenge</span></h4>
+            <p class="challenge"><span lang="ru">Понимать состояние рынка по любому активу и давать вероятностную оценку, которая опирается на доказательства, а не на догадки модели.</span><span lang="en">Read the state of any market and give a probabilistic assessment that rests on evidence, not on a model's guesswork.</span></p>
+            <h4><span lang="ru">Что я построил</span><span lang="en">What I built</span></h4>
+            <ul>
+              <li><span><span lang="ru">Сбор живых данных Binance, новостей GDELT, других активов и деривативов в DuckDB</span><span lang="en">Live ingestion of Binance data, GDELT news, cross-asset and derivatives feeds into DuckDB</span></span></li>
+              <li><span><span lang="ru">Память исторических ситуаций: поиск рыночных аналогов вместо одной гигантской таблицы</span><span lang="en">A memory of past market situations: analogue search instead of one giant training table</span></span></li>
+              <li><span><span lang="ru">376 экспертов по активам и горизонтам и Meta-AI, который учитывает их корреляцию</span><span lang="en">376 experts across assets and horizons, and a Meta-AI that accounts for their correlation</span></span></li>
+              <li><span><span lang="ru">Круглосуточный рантайм: расписание, управляемое самообучение, виртуальный брокер и планировщик рисков</span><span lang="en">An always-on runtime: scheduling, governed self-learning, a paper broker and a risk planner</span></span></li>
+              <li><span><span lang="ru">Веб-терминал на React и ИИ-аналитик в Telegram, который отвечает только по сохранённым данным</span><span lang="en">A React market terminal and a Telegram AI analyst that answers only from stored evidence</span></span></li>
+            </ul>
+          </div>
+          <div class="results" data-reveal>
+            <h4><span lang="ru">Результат</span><span lang="en">Result</span></h4>
+            <div class="results-list">
+              <div class="result"><b><span class="num" data-count="9">9</span><span class="unit"> / 376</span></b><span><span lang="ru">моделей подтвердили устойчивость на новых данных и допущены к работе</span><span lang="en">models proved robust on unseen data and were cleared for use</span></span></div>
+              <div class="result"><b><span class="num" data-count="70">70</span><span class="unit">%</span></b><span><span lang="ru">сравнений выиграл агрегатор, учитывающий корреляцию экспертов</span><span lang="en">of comparisons won by the correlation-aware aggregator</span></span></div>
+              <div class="result"><b><span class="num" data-count="2.75" data-dec="2">2,75</span><span class="unit">×</span></b><span><span lang="ru">во столько раз наивный подсчёт голосов завышает уверенность</span><span lang="en">how much naive vote counting overstates confidence</span></span></div>
+            </div>
+          </div>
+          <p class="case-note" data-reveal><span lang="ru">Система только анализирует и ведёт виртуальный портфель. Реальных сделок и инвестиционных советов нет.</span><span lang="en">The system only analyses and runs a paper portfolio. It places no real trades and gives no investment advice.</span></p>
+        </div>
+      </article>
+
+      <!-- GroundWatch -->
+      <article class="case flip" id="case-gw" data-case="GroundWatch AI">
+        <header class="case-head">
+          <div class="case-meta" data-reveal><span class="tag"><span lang="ru">ИИ и данные</span><span lang="en">AI &amp; data</span></span><span class="label">2026 · NASA FIRMS · MOD44W</span></div>
+          <h3 class="case-title" data-split>GroundWatch AI</h3>
+          <p class="case-lede" data-reveal><span lang="ru">Платформа наблюдения за Землёй: спутниковые данные NASA, архив, мониторинг регионов и ИИ-аналитик, который не выдумывает цифры.</span><span lang="en">An Earth observation platform: NASA satellite data, an archive, region monitoring and an AI analyst that never invents numbers.</span></p>
+        </header>
+        <div class="case-figs has-side">
+          <figure class="fig fig-main">
+            <div class="frame"><div class="chrome"><i></i><i></i><i></i><span>groundwatch-ai · localhost:3000</span></div><div class="shot"><img src="img/gw_overview.jpg" width="1440" height="900" alt="Earth observation map with a density layer of NASA FIRMS detections" loading="lazy"></div></div>
+            <figcaption><b>fig. 3</b><span><span lang="ru">31 658 детекций NASA FIRMS за 24 часа на карте плотности</span><span lang="en">31,658 NASA FIRMS detections in 24 hours on a density map</span></span></figcaption>
+          </figure>
+          <figure class="fig fig-side" data-speed="1">
+            <div class="frame"><div class="shot"><img src="img/gw_aral.jpg" width="1150" height="1055" alt="Aral Sea imagery comparison and measured water area chart" loading="lazy"></div></div>
+            <figcaption><b>fig. 4</b><span><span lang="ru">Арал: снимки и измеренная площадь воды</span><span lang="en">Aral Sea: imagery and measured water area</span></span></figcaption>
+          </figure>
+        </div>
+        <div class="case-body">
+          <dl class="facts" data-reveal>
+            <div><dt><span lang="ru">Роль</span><span lang="en">Role</span></dt><dd><span lang="ru">Full-stack: бэкенд, конвейер данных, интерфейс, ИИ</span><span lang="en">Full-stack: backend, data pipeline, interface, AI</span></dd></div>
+            <div><dt><span lang="ru">Масштаб</span><span lang="en">Scale</span></dt><dd><span lang="ru">414 тыс. записей в архиве · 148 тестов, включая e2e</span><span lang="en">414k archived records · 148 tests including e2e</span></dd></div>
+            <div><dt><span lang="ru">Стек</span><span lang="en">Stack</span></dt><dd class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">Leaflet</span><span class="chip">Playwright</span></dd></div>
+          </dl>
+          <div class="built" data-reveal>
+            <h4><span lang="ru">Задача</span><span lang="en">Challenge</span></h4>
+            <p class="challenge"><span lang="ru">Превратить сырые спутниковые детекции в понятную картину и не исказить при этом ни одной цифры.</span><span lang="en">Turn raw satellite detections into a clear picture without distorting a single number.</span></p>
+            <h4><span lang="ru">Что я построил</span><span lang="en">What I built</span></h4>
+            <ul>
+              <li><span><span lang="ru">Загрузка NASA FIRMS каждые 15 минут с бэкфиллом за 7 дней, устойчивая даже к каналу ~100 КБ/с</span><span lang="en">NASA FIRMS ingestion every 15 minutes with a 7-day backfill, robust even on a ~100 KB/s link</span></span></li>
+              <li><span><span lang="ru">Интерактивная карта: точки и плотность, снимки Terra, Aqua и NOAA-20 за любую дату</span><span lang="en">An interactive map with points and density, Terra, Aqua and NOAA-20 imagery for any date</span></span></li>
+              <li><span><span lang="ru">Правила мониторинга регионов на сервере: каждое наблюдение засчитывается один раз</span><span lang="en">Server-side region monitoring rules where each observation counts once</span></span></li>
+              <li><span><span lang="ru">Кейс Аральского моря: снимки с 1989 года и измеренный ряд площади воды</span><span lang="en">An Aral Sea case: imagery since 1989 and a measured water-area series</span></span></li>
+              <li><span><span lang="ru">ИИ-аналитик на Structured Outputs: доказательства собирает сервер, браузер не может подсунуть свои цифры</span><span lang="en">An AI analyst on Structured Outputs: the server gathers the evidence, so a browser cannot inject its own numbers</span></span></li>
+            </ul>
+          </div>
+          <div class="results" data-reveal>
+            <h4><span lang="ru">Результат</span><span lang="en">Result</span></h4>
+            <div class="results-list">
+              <div class="result"><b><span class="unit">−</span><span class="num" data-count="44">44</span><span class="unit">%</span></b><span><span lang="ru">площади воды Арала в 2000–2015 годах по маске NASA MOD44W</span><span lang="en">Aral Sea water area, 2000–2015, from the NASA MOD44W mask</span></span></div>
+              <div class="result"><b><span class="num" data-count="414">414</span><span class="unit">k</span></b><span><span lang="ru">записей в архиве, обновление каждые 15 минут</span><span lang="en">archived records, refreshed every 15 minutes</span></span></div>
+              <div class="result"><b><span class="num" data-count="0">0</span></b><span><span lang="ru">выдуманных значений: нет данных значит «нет данных», а не ноль</span><span lang="en">invented values: missing data shows as missing, never as zero</span></span></div>
+            </div>
+          </div>
+          <p class="case-note" data-reveal><span lang="ru">Два жёстких правила продукта: недоступные данные не показываются нулём, а спутниковая детекция не выдаётся за подтверждённый пожар.</span><span lang="en">Two hard product rules: unavailable data is never shown as zero, and a satellite detection is never presented as a confirmed fire.</span></p>
+        </div>
+      </article>
+
+      <!-- CASETRACE -->
+      <article class="case" id="case-ct" data-case="CASETRACE">
+        <header class="case-head">
+          <div class="case-meta" data-reveal><span class="tag"><span lang="ru">ИИ и данные</span><span lang="en">AI &amp; data</span></span><span class="label">2026 · <span lang="ru">юриспруденция · OSINT</span><span lang="en">legal · OSINT</span></span></div>
+          <h3 class="case-title" data-split>CASETRACE</h3>
+          <p class="case-lede" data-reveal><span lang="ru">Рабочая станция для юридических расследований и OSINT, где каждый вывод можно проследить до конкретного доказательства.</span><span lang="en">A workstation for legal investigations and OSINT where every conclusion traces back to a specific piece of evidence.</span></p>
+        </header>
+        <div class="case-figs has-side">
+          <figure class="fig fig-main">
+            <div class="frame"><div class="chrome"><i></i><i></i><i></i><span>casetrace · 127.0.0.1:8765</span></div><div class="shot"><img src="img/ct_overview.jpg" width="1440" height="900" alt="Case overview with a relationship graph and graded findings, synthetic demo data" loading="lazy"></div></div>
+            <figcaption><b>fig. 5</b><span><span lang="ru">Дело: граф связей и выводы со статусами (демо-данные синтетические)</span><span lang="en">A case: relationship graph and graded findings (synthetic demo data)</span></span></figcaption>
+          </figure>
+          <figure class="fig fig-side" data-speed="1">
+            <div class="frame"><div class="shot"><img src="img/ct_claims.jpg" width="1236" height="420" alt="Claims with supporting and contradicting evidence" loading="lazy"></div></div>
+            <figcaption><b>fig. 6</b><span><span lang="ru">Утверждения: доказательства «за» и «против»</span><span lang="en">Claims: evidence for and against</span></span></figcaption>
+          </figure>
+        </div>
+        <div class="case-body">
+          <dl class="facts" data-reveal>
+            <div><dt><span lang="ru">Роль</span><span lang="en">Role</span></dt><dd><span lang="ru">Всё: архитектура, коннекторы, логика доказательств, UI</span><span lang="en">Everything: architecture, connectors, evidence logic, UI</span></dd></div>
+            <div><dt><span lang="ru">Масштаб</span><span lang="en">Scale</span></dt><dd><span lang="ru">23 тыс. строк · 137 тестов, работают без сети</span><span lang="en">23k lines · 137 tests, all offline</span></dd></div>
+            <div><dt><span lang="ru">Стек</span><span lang="en">Stack</span></dt><dd class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLite FTS5</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span></dd></div>
+            <div><dt><span lang="ru">Конвейер дела</span><span lang="en">Case pipeline</span></dt><dd>
+              <ol class="pipeline" data-pipeline>
+                <li class="step"><i>01</i><span><span lang="ru">Дело</span><span lang="en">Case</span></span></li>
+                <li class="step"><i>02</i><span><span lang="ru">Поиск</span><span lang="en">Search</span></span></li>
+                <li class="step"><i>03</i><span><span lang="ru">Сбор</span><span lang="en">Collect</span></span></li>
+                <li class="step"><i>04</i><span><span lang="ru">Связи</span><span lang="en">Correlate</span></span></li>
+                <li class="step"><i>05</i><span><span lang="ru">Проверка</span><span lang="en">Verify</span></span></li>
+                <li class="step"><i>06</i><span><span lang="ru">Анализ</span><span lang="en">Analyse</span></span></li>
+                <li class="step"><i>07</i><span><span lang="ru">Доказат-ва</span><span lang="en">Evidence</span></span></li>
+                <li class="step"><i>08</i><span><span lang="ru">Хронология</span><span lang="en">Timeline</span></span></li>
+                <li class="step final"><i>09</i><span><span lang="ru">Отчёт</span><span lang="en">Report</span></span></li>
+              </ol>
+            </dd></div>
+          </dl>
+          <div class="built" data-reveal>
+            <h4><span lang="ru">Задача</span><span lang="en">Challenge</span></h4>
+            <p class="challenge"><span lang="ru">Собрать досье по компании или человеку из открытых источников так, чтобы выводы выдержали проверку юриста.</span><span lang="en">Build a dossier on a company or a person from open sources, with conclusions that hold up under a lawyer's review.</span></p>
+            <h4><span lang="ru">Что я построил</span><span lang="en">What I built</span></h4>
+            <ul>
+              <li><span><span lang="ru">19 коннекторов источников за единым интерфейсом: реестры, архивы, соцсети, санкционные списки</span><span lang="en">19 source connectors behind one interface: registries, archives, social networks, sanctions lists</span></span></li>
+              <li><span><span lang="ru">Сверка личностей по 16 сигналам: совпадение одного ника никогда не даёт больше 45%</span><span lang="en">Identity resolution on 16 signals; a shared username alone never scores above 45%</span></span></li>
+              <li><span><span lang="ru">Граф связей, статусы утверждений от Verified до Contradicted, три детектора противоречий</span><span lang="en">A relationship graph, claim statuses from Verified to Contradicted, three contradiction detectors</span></span></li>
+              <li><span><span lang="ru">Доказательства с SHA-256 и цепочкой происхождения, хронология, отчёты в PDF и DOCX</span><span lang="en">Evidence with SHA-256 and a provenance chain, a timeline, PDF and DOCX reports</span></span></li>
+              <li><span><span lang="ru">ИИ по желанию: выдуманные ссылки удаляются, фразы без доказательств помечаются UNVERIFIED</span><span lang="en">Optional AI: invented citations are removed and unsupported sentences are marked UNVERIFIED</span></span></li>
+            </ul>
+          </div>
+          <div class="results" data-reveal>
+            <h4><span lang="ru">Результат</span><span lang="en">Result</span></h4>
+            <div class="results-list">
+              <div class="result"><b><span class="num" data-count="19">19</span></b><span><span lang="ru">источников данных в одном поиске</span><span lang="en">data sources behind one search box</span></span></div>
+              <div class="result"><b><span class="num" data-count="100">100</span><span class="unit">%</span></b><span><span lang="ru">выводов прослеживаются до доказательства</span><span lang="en">of conclusions trace back to evidence</span></span></div>
+              <div class="result"><b><span class="num" data-count="0">0</span></b><span><span lang="ru">телеметрии: работает только на вашем компьютере</span><span lang="en">telemetry: it runs only on your machine</span></span></div>
+            </div>
+          </div>
+          <p class="case-note" data-reveal><span lang="ru">Приложение слушает только 127.0.0.1, работает со строгим CSP и отклоняет чужие Host и Origin. ИИ подключается к любому OpenAI-совместимому провайдеру, Ollama или LM Studio.</span><span lang="en">The app listens on 127.0.0.1 only, runs under a strict CSP and refuses foreign Host and Origin headers. AI works with any OpenAI-compatible provider, Ollama or LM Studio.</span></p>
+        </div>
+      </article>
+
+      <!-- Brief-AI -->
+      <article class="case flip" id="case-bot" data-case="Бриф-ИИ" data-case-en="Brief-AI">
+        <header class="case-head">
+          <div class="case-meta" data-reveal><span class="tag"><span lang="ru">Автоматизация бизнеса</span><span lang="en">Business automation</span></span><span class="label">2026 · Telegram · RU / UZ</span></div>
+          <h3 class="case-title" data-split><span lang="ru">Бриф-ИИ</span><span lang="en">Brief-AI</span></h3>
+          <p class="case-lede" data-reveal><span lang="ru">Конвейер, который превращает анкету владельца бизнеса в готового ИИ-бота для Telegram с автопроверкой перед запуском.</span><span lang="en">A pipeline that turns a business owner's questionnaire into a ready Telegram AI bot, checked automatically before launch.</span></p>
+        </header>
+        <div class="case-figs has-side flow-side">
+          <figure class="fig fig-main">
+            <div class="frame"><div class="chrome"><i></i><i></i><i></i><span><span lang="ru">Бриф-ИИ · десктоп-приложение</span><span lang="en">Brief-AI · desktop app</span></span></div><div class="shot"><img src="img/bot_app.jpg" width="1280" height="840" alt="Brief-AI desktop app overview with bots, leads and AI spend" loading="lazy"></div></div>
+            <figcaption><b>fig. 7</b><span><span lang="ru">Десктоп-приложение: боты, заявки и расходы на нейросети</span><span lang="en">Desktop app: bots, leads and AI spend</span></span></figcaption>
+          </figure>
+          <div class="fig fig-side" data-speed="1">
+            <ol class="flow" data-flow>
+              <li class="flow-step"><span class="k">01</span><div><b><span lang="ru">Анкета</span><span lang="en">Questionnaire</span></b><span><span lang="ru">13 вопросов в Telegram на RU и UZ</span><span lang="en">13 questions in Telegram, RU and UZ</span></span></div></li>
+              <li class="flow-step"><span class="k">02</span><div><b><span lang="ru">Генерация</span><span lang="en">Generation</span></b><span><span lang="ru">база знаний, промпт, поля заявки</span><span lang="en">knowledge base, prompt, lead fields</span></span></div></li>
+              <li class="flow-step"><span class="k">03</span><div><b><span lang="ru">Автопроверка</span><span lang="en">Self-check</span></b><span><span lang="ru">30 вопросов и отчёт о выдумках</span><span lang="en">30 questions and a report on invented facts</span></span></div></li>
+              <li class="flow-step"><span class="k">04</span><div><b><span lang="ru">Одобрение</span><span lang="en">Approval</span></b><span><span lang="ru">владелец смотрит отчёт и правит</span><span lang="en">the owner reviews the report and edits</span></span></div></li>
+              <li class="flow-step"><span class="k">05</span><div><b><span lang="ru">Запуск</span><span lang="en">Launch</span></b><span><span lang="ru">бот отвечает клиентам 24/7</span><span lang="en">the bot answers customers 24/7</span></span></div></li>
+            </ol>
+          </div>
+        </div>
+        <div class="case-body">
+          <dl class="facts" data-reveal>
+            <div><dt><span lang="ru">Роль</span><span lang="en">Role</span></dt><dd><span lang="ru">Всё: продукт, генератор, боты, приложение, деплой</span><span lang="en">Everything: product, generator, bots, app, deployment</span></dd></div>
+            <div><dt><span lang="ru">Масштаб</span><span lang="en">Scale</span></dt><dd><span lang="ru">11 тыс. строк · 68 тестов · один сервер на много ботов</span><span lang="en">11k lines · 68 tests · one server, many bots</span></dd></div>
+            <div><dt><span lang="ru">Стек</span><span lang="en">Stack</span></dt><dd class="chips"><span class="chip">Python</span><span class="chip">Telegram Bot API</span><span class="chip">OpenAI</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">systemd</span></dd></div>
+          </dl>
+          <div class="built" data-reveal>
+            <h4><span lang="ru">Задача</span><span lang="en">Challenge</span></h4>
+            <p class="challenge"><span lang="ru">Запускать ИИ-ботов для малого бизнеса без ручной настройки каждого и так, чтобы бот не выдумывал цены и сроки.</span><span lang="en">Launch AI bots for small businesses without configuring each by hand, and make sure no bot invents prices or deadlines.</span></p>
+            <h4><span lang="ru">Что я построил</span><span lang="en">What I built</span></h4>
+            <ul>
+              <li><span><span lang="ru">Анкета в Telegram на русском и узбекском: прайсы файлами (PDF, Excel, фото), голосовые ответы</span><span lang="en">A Telegram questionnaire in Russian and Uzbek: price lists as files (PDF, Excel, photos), voice answers</span></span></li>
+              <li><span><span lang="ru">Генератор базы знаний, системного промпта и полей заявки под нишу бизнеса</span><span lang="en">A generator for the knowledge base, system prompt and lead form fields for each niche</span></span></li>
+              <li><span><span lang="ru">Автопроверка на 30 вопросах, включая каверзные, с отчётом о выдумках и ошибках языка</span><span lang="en">An automatic check on 30 questions, tricky ones included, with a report on invented facts and wrong-language replies</span></span></li>
+              <li><span><span lang="ru">Модели в ролях: менеджер, главный, резервный и надзиратель, который проверяет рискованные ответы до отправки</span><span lang="en">Models in roles: a manager, a lead, a fallback and a supervisor that checks risky replies before they go out</span></span></li>
+              <li><span><span lang="ru">Десктоп-приложение, установка в один клик и перенос на сервер Ubuntu</span><span lang="en">A desktop app, one-click install and migration to an Ubuntu server</span></span></li>
+            </ul>
+          </div>
+          <div class="results" data-reveal>
+            <h4><span lang="ru">Результат</span><span lang="en">Result</span></h4>
+            <div class="results-list">
+              <div class="result"><b><span class="num" data-count="13">13</span></b><span><span lang="ru">вопросов анкеты: от брифа до бота без программиста</span><span lang="en">questionnaire steps: from brief to live bot with no developer</span></span></div>
+              <div class="result"><b><span class="num" data-count="30">30</span></b><span><span lang="ru">контрольных вопросов перед каждым запуском</span><span lang="en">control questions before every launch</span></span></div>
+              <div class="result"><b>24<span class="unit">/</span>7</b><span><span lang="ru">ответы клиентам и заявки прямо в группу владельца</span><span lang="en">customer replies, with leads sent straight to the owner's group</span></span></div>
+            </div>
+          </div>
+          <p class="case-note" data-reveal><span lang="ru">Бот отвечает только по базе знаний и на языке клиента. При жалобе или сложном вопросе зовёт человека, а каждое утро надзиратель присылает аудит ночных диалогов.</span><span lang="en">The bot answers only from its knowledge base and in the customer's language. On a complaint or a hard question it calls a human, and every morning the supervisor sends an audit of overnight dialogues.</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <nav class="case-nav" aria-label="Case studies">
+    <span class="cn-count">01 / 04</span>
+    <span class="cn-name">Market Intelligence AI</span>
+    <span class="cn-dots">
+      <button type="button" data-goto="case-mi" aria-label="Market Intelligence AI"></button>
+      <button type="button" data-goto="case-gw" aria-label="GroundWatch AI"></button>
+      <button type="button" data-goto="case-ct" aria-label="CASETRACE"></button>
+      <button type="button" data-goto="case-bot" aria-label="Brief-AI"></button>
+    </span>
+  </nav>
+
+  <!-- MORE PROJECTS -->
+  <section class="more" id="more">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label"><span lang="ru">Ещё проекты</span><span lang="en">More projects</span></span>
+        <h2 class="sec-title" data-split><span lang="ru">Локальный ИИ, <em>самообучение</em> и продажи</span><span lang="en">Local AI, <em>self-learning</em> and sales</span></h2>
+      </div>
+      <div class="cards">
+        <article class="card tilt" data-reveal>
+          <span class="tag"><span lang="ru">ИИ и данные</span><span lang="en">AI &amp; data</span></span>
+          <h3>LocalMind</h3>
+          <p><span lang="ru">ИИ-собеседник с характером, памятью и целями. Работает целиком на ноутбуке с видеокартой 4 ГБ, без облака и абонентской платы.</span><span lang="en">An AI companion with a personality, memory and goals. It runs entirely on a laptop with a 4 GB GPU, with no cloud and no subscription.</span></p>
+          <div class="bench" data-bench>
+            <div class="bench-row"><span class="m">Qwen3.5-2B<small><span lang="ru">целиком на GPU</span><span lang="en">fully on GPU</span></small></span><span class="bar"><i style="--v:100%"></i></span><span class="v">101 <span lang="ru">т/с</span><span lang="en">t/s</span></span></div>
+            <div class="bench-row pick"><span class="m">Qwen3.5-4B<small><span lang="ru">целиком на GPU</span><span lang="en">fully on GPU</span></small></span><span class="bar"><i style="--v:47.5%"></i></span><span class="v">48 <span lang="ru">т/с</span><span lang="en">t/s</span></span></div>
+            <div class="bench-row"><span class="m">Qwen3.5-9B<small><span lang="ru">16 из 32 слоёв</span><span lang="en">16 of 32 layers</span></small></span><span class="bar"><i style="--v:10.9%"></i></span><span class="v">11 <span lang="ru">т/с</span><span lang="en">t/s</span></span></div>
+            <div class="bench-cap"><span lang="ru">Замер на RTX 3050 Ti 4 ГБ. Выбрана 4B: ответ за 2–3 с, 9B отвечала бы около 15 с.</span><span lang="en">Measured on an RTX 3050 Ti 4 GB. 4B chosen: 2–3 s per reply, 9B would take about 15 s.</span></div>
+          </div>
+          <ul>
+            <li><span><span lang="ru">Своё дообучение QLoRA на модели 2B</span><span lang="en">Own QLoRA fine-tuning on a 2B model</span></span></li>
+            <li><span><span lang="ru">Память: SQLite, FTS5 и эмбеддинги, изоляция по пользователям</span><span lang="en">Memory: SQLite, FTS5 and embeddings, isolated per user</span></span></li>
+            <li><span><span lang="ru">Telegram и веб-панель: чат, память, цели, обучение</span><span lang="en">Telegram and a web panel: chat, memory, goals, training</span></span></li>
+          </ul>
+          <div class="card-foot"><span class="chip">Python</span><span class="chip">llama.cpp</span><span class="chip">QLoRA</span><span class="chip">FastAPI</span><span class="tests"><span lang="ru">158 тестов</span><span lang="en">158 tests</span></span></div>
+        </article>
+
+        <article class="card tilt" data-reveal>
+          <span class="tag"><span lang="ru">ИИ и данные</span><span lang="en">AI &amp; data</span></span>
+          <h3>Evolution Sandbox</h3>
+          <p><span lang="ru">Лаборатория, где прогнозные модели развиваются сами под строгим контролем от подгонки и утечек данных.</span><span lang="en">A lab where forecasting models evolve on their own, under strict guards against overfitting and data leakage.</span></p>
+          <figure class="fig">
+            <div class="frame"><div class="shot invert"><img src="img/evo_brier.jpg" width="1430" height="585" alt="Rolling Brier score of static, periodic and autonomous systems" loading="lazy"></div></div>
+            <figcaption><b>fig. 8</b><span><span lang="ru">Скользящая ошибка Брайера трёх систем, меньше значит лучше</span><span lang="en">Rolling Brier score of three systems, lower is better</span></span></figcaption>
+          </figure>
+          <ul>
+            <li><span><span lang="ru">161 претендент отсеян теневой проверкой на будущих данных</span><span lang="en">161 challengers rejected by shadow testing on future data</span></span></li>
+            <li><span><span lang="ru">Признаки-ловушки «из будущего» недоступны модели, и это доказано тестами</span><span lang="en">Leakage-trap features from the future are unreachable, proven by tests</span></span></li>
+            <li><span><span lang="ru">Повышение модели только с бутстреп-интервалом и поправкой Бонферрони</span><span lang="en">Promotion only with a bootstrap interval and a Bonferroni correction</span></span></li>
+          </ul>
+          <div class="card-foot"><span class="chip">Python</span><span class="chip">walk-forward</span><span class="chip">bootstrap</span><span class="tests"><span lang="ru">38 тестов</span><span lang="en">38 tests</span></span></div>
+        </article>
+
+        <article class="card tilt" data-reveal>
+          <span class="tag"><span lang="ru">Автоматизация бизнеса</span><span lang="en">Business automation</span></span>
+          <h3><span lang="ru">ИИ-продавец в Instagram</span><span lang="en">Instagram AI Seller</span></h3>
+          <p><span lang="ru">Отвечает клиентам в директе и под постами, оформляет заказы и зовёт менеджера в Telegram. Модель работает локально.</span><span lang="en">Answers customers in DMs and under posts, takes orders and calls a manager in Telegram. The model runs locally.</span></p>
+          <div class="mini-flow" aria-label="Flow">
+            <div class="col"><span><span lang="ru">Директ</span><span lang="en">DMs</span></span><span><span lang="ru">Комментарии</span><span lang="en">Comments</span></span><span><span lang="ru">Фото</span><span lang="en">Photos</span></span></div>
+            <div class="core">Gemma 3 12B<small>Ollama · <span lang="ru">локально</span><span lang="en">local</span></small></div>
+            <div class="col"><span><span lang="ru">Заказ</span><span lang="en">Order</span></span><span><span lang="ru">Остаток</span><span lang="en">Stock</span></span><span><span lang="ru">Менеджер</span><span lang="en">Manager</span></span></div>
+          </div>
+          <ul>
+            <li><span><span lang="ru">Понимает фото клиента и отправляет фото товара из каталога</span><span lang="en">Understands customer photos and sends product photos from the catalogue</span></span></li>
+            <li><span><span lang="ru">Цену не из каталога не отправит, а передаст менеджеру</span><span lang="en">Never sends a price that is not in the catalogue; hands over to a manager</span></span></li>
+            <li><span><span lang="ru">Пока диалог ведёт человек, бот молчит</span><span lang="en">Stays silent while a human handles the chat</span></span></li>
+            <li><span><span lang="ru">Безопасный запуск: DRY_RUN, тестовый аккаунт, затем основной</span><span lang="en">Safe rollout: DRY_RUN, a test account, then the main one</span></span></li>
+          </ul>
+          <div class="card-foot"><span class="chip">Python</span><span class="chip">Ollama</span><span class="chip">Gemma 3</span><span class="chip">Telegram</span><span class="tests"><span lang="ru">58 тестов</span><span lang="en">58 tests</span></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEB CONCEPTS -->
+  <section class="web" id="web">
+    <div class="web-inner">
+      <div class="web-head wrap">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="label"><span lang="ru">Веб-разработка</span><span lang="en">Web development</span></span>
+          <h2 class="sec-title" data-split><span lang="ru">Пять концепт-<em>сайтов</em></span><span lang="en">Five concept <em>sites</em></span></h2>
+        </div>
+        <p class="sec-lede" data-reveal style="max-width:44ch"><span lang="ru">Сайты для разных бизнесов: 3D в реальном времени, анимация по скроллу и рабочие интерактивные элементы. Вся графика сгенерирована кодом, бренды вымышлены.</span><span lang="en">Sites for different businesses: real-time 3D, scroll-driven motion and working interactive parts. All graphics are generated in code; the brands are fictional.</span></p>
+      </div>
+      <div class="web-track">
+        <a class="web-card" href="https://claude.ai/artifact/HHizRFotTRQXiW9W4NHFWM" target="_blank" rel="noopener" data-cursor-ru="Открыть" data-cursor-en="Open">
+          <div class="frame"><div class="shot"><img src="img/web_nova.jpg" width="960" height="600" alt="NOVA Energy concept site" loading="lazy"></div></div>
+          <div class="web-meta"><b>NOVA Energy</b><span class="open"><span lang="ru">Открыть</span><span lang="en">Open</span> ↗</span><span><span lang="ru">3D-карусель банок, страница меняет цвет под вкус</span><span lang="en">A 3D can carousel; the page recolours per flavour</span></span></div>
+        </a>
+        <a class="web-card" href="https://claude.ai/artifact/Lb2iTWL7QuJn7w4os44BAn" target="_blank" rel="noopener" data-cursor-ru="Открыть" data-cursor-en="Open">
+          <div class="frame"><div class="shot"><img src="img/web_pomona.jpg" width="960" height="600" alt="Pomona Ventures concept site" loading="lazy"></div></div>
+          <div class="web-meta"><b>Pomona Ventures</b><span class="open"><span lang="ru">Открыть</span><span lang="en">Open</span> ↗</span><span><span lang="ru">Небо-шейдер: от утра к закату по мере скролла</span><span lang="en">A shader sky that turns from morning to dusk as you scroll</span></span></div>
+        </a>
+        <a class="web-card" href="https://claude.ai/artifact/S91dHuggeSaxT59doPL1gQ" target="_blank" rel="noopener" data-cursor-ru="Открыть" data-cursor-en="Open">
+          <div class="frame"><div class="shot"><img src="img/web_kryo.jpg" width="960" height="600" alt="KRYO Vault concept site" loading="lazy"></div></div>
+          <div class="web-meta"><b>KRYO Vault</b><span class="open"><span lang="ru">Открыть</span><span lang="en">Open</span> ↗</span><span><span lang="ru">Полёт камеры сквозь лёд и тысячи частиц</span><span lang="en">A camera flight through ice and thousands of particles</span></span></div>
+        </a>
+        <a class="web-card" href="https://claude.ai/artifact/XY1htqqTLwMoT4vVDfECfT" target="_blank" rel="noopener" data-cursor-ru="Открыть" data-cursor-en="Open">
+          <div class="frame"><div class="shot"><img src="img/web_meridian.jpg" width="960" height="600" alt="Meridian Air concept site" loading="lazy"></div></div>
+          <div class="web-meta"><b>Meridian Air</b><span class="open"><span lang="ru">Открыть</span><span lang="en">Open</span> ↗</span><span><span lang="ru">Пиксельный аэропорт и табло вылетов, которое листается</span><span lang="en">A pixel airport and a split-flap board that really flips</span></span></div>
+        </a>
+        <a class="web-card" href="https://claude.ai/artifact/XijSKCTskPVGEanEZxehiw" target="_blank" rel="noopener" data-cursor-ru="Открыть" data-cursor-en="Open">
+          <div class="frame"><div class="shot"><img src="img/web_onyx.jpg" width="960" height="600" alt="ONYX concept site" loading="lazy"></div></div>
+          <div class="web-meta"><b>ONYX</b><span class="open"><span lang="ru">Открыть</span><span lang="en">Open</span> ↗</span><span><span lang="ru">Стальная 3D-карта и курсы в реальном времени</span><span lang="en">A steel 3D card and live rates</span></span></div>
+        </a>
+      </div>
+      <div class="web-foot wrap">
+        <span class="web-count"><b>01</b> / 05</span>
+        <span class="web-progress"><i></i></span>
+        <span class="label">Three.js · WebGL · GSAP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (porcelain sheet) -->
+  <section class="sheet section" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label"><span lang="ru">Услуги</span><span lang="en">Services</span></span>
+        <h2 class="sec-title" data-split><span lang="ru">Чем могу <em>помочь</em></span><span lang="en">How I can <em>help</em></span></h2>
+        <p class="sec-lede" data-reveal><span lang="ru">Беру задачу целиком или подключаюсь к вашей команде на нужном участке.</span><span lang="en">I take on a whole project or join your team where you need it.</span></p>
+      </div>
+      <div class="svc-list" data-svc>
+        <div class="svc" data-img="0" data-reveal>
+          <h3><span lang="ru">ИИ-ассистенты для продаж и поддержки</span><span lang="en">AI assistants for sales and support</span></h3>
+          <p><span lang="ru">Боты для Telegram и Instagram, которые отвечают по вашим данным, собирают заявки и передают сложное человеку.</span><span lang="en">Telegram and Instagram bots that answer from your data, collect leads and hand hard cases to a human.</span></p>
+          <span class="ref"><span lang="ru">как в Бриф-ИИ и ИИ-продавце</span><span lang="en">as in Brief-AI and the Instagram seller</span></span>
+        </div>
+        <div class="svc" data-img="1" data-reveal>
+          <h3><span lang="ru">Автоматизация процессов</span><span lang="en">Process automation</span></h3>
+          <p><span lang="ru">Отчёты, рассылки, обработка документов и заявок без ручной рутины, с журналом и уведомлениями.</span><span lang="en">Reports, mailings, document and lead processing without manual routine, with logs and alerts.</span></p>
+          <span class="ref"><span lang="ru">как в Бриф-ИИ</span><span lang="en">as in Brief-AI</span></span>
+        </div>
+        <div class="svc" data-img="2" data-reveal>
+          <h3><span lang="ru">Аналитика и дашборды</span><span lang="en">Analytics and dashboards</span></h3>
+          <p><span lang="ru">Сбор данных из API и таблиц, хранилище, понятные панели, графики и оповещения по правилам.</span><span lang="en">Data from APIs and spreadsheets, storage, clear panels, charts and rule-based alerts.</span></p>
+          <span class="ref"><span lang="ru">как в Market Intelligence и GroundWatch</span><span lang="en">as in Market Intelligence and GroundWatch</span></span>
+        </div>
+        <div class="svc" data-img="3" data-reveal>
+          <h3><span lang="ru">ИИ на ваших данных</span><span lang="en">AI on your own data</span></h3>
+          <p><span lang="ru">Поиск и ответы по документам компании, в том числе на локальной модели, когда данные не должны уходить наружу.</span><span lang="en">Search and answers over company documents, including on a local model when data must not leave the building.</span></p>
+          <span class="ref"><span lang="ru">как в CASETRACE и LocalMind</span><span lang="en">as in CASETRACE and LocalMind</span></span>
+        </div>
+        <div class="svc" data-img="4" data-reveal>
+          <h3><span lang="ru">Сайты и лендинги</span><span lang="en">Websites and landing pages</span></h3>
+          <p><span lang="ru">Сайты с 3D и анимацией, которые хорошо работают на телефоне и собирают заявки.</span><span lang="en">Sites with 3D and motion that work well on phones and collect leads.</span></p>
+          <span class="ref"><span lang="ru">как в веб-концептах</span><span lang="en">as in the web concepts</span></span>
+        </div>
+        <div class="svc" data-img="5" data-reveal>
+          <h3><span lang="ru">Бэкенд и интеграции</span><span lang="en">Backend and integrations</span></h3>
+          <p><span lang="ru">API на FastAPI, базы данных, интеграции с Telegram, Instagram и внешними сервисами, деплой на сервер.</span><span lang="en">FastAPI services, databases, integrations with Telegram, Instagram and external services, server deployment.</span></p>
+          <span class="ref"><span lang="ru">во всех проектах</span><span lang="en">in every project</span></span>
+        </div>
+      </div>
+
+      <div class="process">
+        <div class="sec-head">
+          <span class="label"><span lang="ru">Как я работаю</span><span lang="en">Process</span></span>
+          <h2 class="sec-title" data-split><span lang="ru">Четыре шага до <em>запуска</em></span><span lang="en">Four steps to <em>launch</em></span></h2>
+        </div>
+        <div class="proc-grid" data-process>
+          <div class="proc-line"><i></i></div>
+          <div class="proc" data-reveal><span class="k">01</span><h3><span lang="ru">Разбор задачи</span><span lang="en">Scope</span></h3><p><span lang="ru">Уточняю цель, данные и ограничения. Вместе фиксируем, что считается результатом.</span><span lang="en">I clarify the goal, the data and the limits. Together we agree on what counts as done.</span></p></div>
+          <div class="proc" data-reveal><span class="k">02</span><h3><span lang="ru">Прототип</span><span lang="en">Prototype</span></h3><p><span lang="ru">Рабочая версия на реальных данных, чтобы вы увидели продукт как можно раньше.</span><span lang="en">A working version on real data, so you see the product as early as possible.</span></p></div>
+          <div class="proc" data-reveal><span class="k">03</span><h3><span lang="ru">Проверка</span><span lang="en">Verify</span></h3><p><span lang="ru">Автотесты, прогон реальных сценариев и прямой отчёт о том, что работает и где ограничения.</span><span lang="en">Automated tests, real scenario runs and a straight report on what works and where the limits are.</span></p></div>
+          <div class="proc" data-reveal><span class="k">04</span><h3><span lang="ru">Запуск и поддержка</span><span lang="en">Launch and support</span></h3><p><span lang="ru">Деплой на ваш сервер или в облако, инструкция и доработки по обратной связи.</span><span lang="en">Deployment to your server or cloud, a handover guide and iterations on feedback.</span></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="svc-preview" aria-hidden="true">
+    <img src="img/bot_app.jpg" alt=""><img src="img/bot_app.jpg" alt=""><img src="img/mi_market.jpg" alt=""><img src="img/ct_overview.jpg" alt=""><img src="img/web_nova.jpg" alt=""><img src="img/gw_overview.jpg" alt="">
+  </div>
+
+  <!-- STACK -->
+  <section class="section stack" id="stack">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label"><span lang="ru">Стек</span><span lang="en">Stack</span></span>
+        <h2 class="sec-title" data-split><span lang="ru">Технологии <em>в работе</em></span><span lang="en">Tools I <em>ship with</em></span></h2>
+      </div>
+      <div class="stack-list">
+        <div class="stack-row" data-reveal><h3><span lang="ru">Языки</span><span lang="en">Languages</span></h3><div class="chips"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div></div>
+        <div class="stack-row" data-reveal><h3><span lang="ru">Бэкенд</span><span lang="en">Backend</span></h3><div class="chips"><span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">Alembic</span><span class="chip">asyncio</span><span class="chip">REST API</span></div></div>
+        <div class="stack-row" data-reveal><h3><span lang="ru">Фронтенд</span><span lang="en">Frontend</span></h3><div class="chips"><span class="chip">React 19</span><span class="chip">Next.js 16</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">Three.js</span><span class="chip">WebGL</span><span class="chip">Leaflet</span><span class="chip">Recharts</span></div></div>
+        <div class="stack-row" data-reveal><h3><span lang="ru">Данные</span><span lang="en">Data</span></h3><div class="chips"><span class="chip">DuckDB</span><span class="chip">SQLite FTS5</span><span class="chip">PostgreSQL</span><span class="chip"><span lang="ru">временные ряды</span><span lang="en">time series</span></span><span class="chip"><span lang="ru">эмбеддинги</span><span lang="en">embeddings</span></span></div></div>
+        <div class="stack-row" data-reveal><h3><span lang="ru">ИИ и ML</span><span lang="en">AI &amp; ML</span></h3><div class="chips"><span class="chip">OpenAI</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">llama.cpp</span><span class="chip">Ollama</span><span class="chip">QLoRA</span><span class="chip">Structured Outputs</span><span class="chip">walk-forward</span></div></div>
+        <div class="stack-row" data-reveal><h3><span lang="ru">Качество и деплой</span><span lang="en">Quality &amp; deploy</span></h3><div class="chips"><span class="chip">pytest</span><span class="chip">Vitest</span><span class="chip">Playwright</span><span class="chip">ESLint</span><span class="chip">Docker</span><span class="chip">systemd</span><span class="chip">Ubuntu</span></div></div>
+        <div class="stack-row" data-reveal><h3><span lang="ru">Интеграции</span><span lang="en">Integrations</span></h3><div class="chips"><span class="chip">Telegram Bot API</span><span class="chip">Instagram</span><span class="chip">NASA FIRMS</span><span class="chip">NASA GIBS</span><span class="chip">Binance</span><span class="chip">GDELT</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0"><span class="label"><span lang="ru">Контакты</span><span lang="en">Contact</span></span></div>
+      <h2 class="contact-title" data-split><span lang="ru">Есть задача? <em>Давайте обсудим.</em></span><span lang="en">Have a project? <em>Let's talk.</em></span></h2>
+      <div class="contact-grid">
+        <div class="contact-copy" data-reveal>
+          <p><span lang="ru">Расскажите, что нужно автоматизировать или построить. Отвечу с планом и сроками, а любой проект с этой страницы могу показать вживую.</span><span lang="en">Tell me what you need automated or built. I will reply with a plan and a timeline, and I can demo any project on this page live.</span></p>
+          <div class="contact-cta">
+            <a class="btn btn-primary" href="https://t.me/xlebll" target="_blank" rel="noopener" data-magnetic><span class="btn-fill"></span><span class="btn-text"><span lang="ru">Написать в Telegram</span><span lang="en">Message on Telegram</span></span><svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M4.5 3H11v6.5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+          </div>
+        </div>
+        <div class="channels">
+          <div class="channel" data-reveal>
+            <span class="label">Telegram <button class="copy" type="button" data-copy="tg"><span lang="ru">Копировать</span><span lang="en">Copy</span></button></span>
+            <a class="val" id="c-tg" href="https://t.me/xlebll" target="_blank" rel="noopener">@xlebll</a>
+          </div>
+          <div class="channel" data-reveal>
+            <span class="label">Email <button class="copy" type="button" data-copy="mail"><span lang="ru">Копировать</span><span lang="en">Copy</span></button></span>
+            <span class="val" id="c-mail">cavidqahramanov98@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-name" data-chars><span lang="ru">Джавид <em>Гахраманов</em></span><span lang="en">Javid <em>Gahramanov</em></span></div>
+    <div class="foot-row">
+      <span>© 2026 · <span lang="ru">Джавид Гахраманов</span><span lang="en">Javid Gahramanov</span></span>
+      <span>Website by Javid Gahramanov</span>
+      <a href="#top"><span lang="ru">Наверх ↑</span><span lang="en">Back to top ↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  /* Contacts: fill these in and they appear in the Contact section. */
+  const CONTACT = { tg: '@xlebll', mail: 'cavidqahramanov98@gmail.com' };
+
+  const root = document.documentElement;
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = window.matchMedia('(pointer: fine)').matches;
+  const G = window.gsap, ST = window.ScrollTrigger;
+  const motion = !!(G && ST) && !reduce;
+  let lang = root.getAttribute('data-lang') || 'ru';
+  let lenis = null;
+
+  /* ---------- helpers ---------- */
+  function fmt(v, dec) {
+    return new Intl.NumberFormat(lang === 'ru' ? 'ru-RU' : 'en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }).format(v);
+  }
+  function renderCount(el, v) { el.textContent = fmt(v, +(el.dataset.dec || 0)); }
+
+  function splitWords(el) {
+    if (el._words) return el._words;
+    const walk = (node) => {
+      Array.from(node.childNodes).forEach((child) => {
+        if (child.nodeType === 3) {
+          const parts = child.textContent.split(/(\s+)/);
+          if (parts.length === 1 && !parts[0]) return;
+          const frag = document.createDocumentFragment();
+          parts.forEach((part) => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+            const w = document.createElement('span'); w.className = 'w';
+            const i = document.createElement('span'); i.className = 'wi'; i.textContent = part;
+            w.appendChild(i); frag.appendChild(w);
+          });
+          node.replaceChild(frag, child);
+        } else if (child.nodeType === 1) {
+          walk(child);
+        }
+      });
+    };
+    walk(el);
+    el._words = $$('.wi', el);
+    return el._words;
+  }
+  function splitChars(el) {
+    const walk = (node) => {
+      Array.from(node.childNodes).forEach((child) => {
+        if (child.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          Array.from(child.textContent).forEach((c) => {
+            if (c === ' ') { frag.appendChild(document.createTextNode(' ')); return; }
+            const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; frag.appendChild(s);
+          });
+          node.replaceChild(frag, child);
+        } else if (child.nodeType === 1) walk(child);
+      });
+    };
+    walk(el);
+    return $$('.ch', el);
+  }
+
+  /* ---------- contacts ---------- */
+  Object.keys(CONTACT).forEach((k) => {
+    const el = document.getElementById('c-' + k);
+    const btn = $('[data-copy="' + k + '"]');
+    if (!el) return;
+    if (CONTACT[k]) el.textContent = CONTACT[k];
+    else { el.classList.add('placeholder'); if (btn) btn.disabled = true; }
+  });
+  $$('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const el = document.getElementById('c-' + btn.dataset.copy);
+      const text = el ? el.textContent.trim() : '';
+      const label = btn.innerHTML;
+      const done = (ok) => {
+        btn.textContent = ok ? (lang === 'ru' ? 'Скопировано' : 'Copied') : (lang === 'ru' ? 'Выделено' : 'Selected');
+        setTimeout(() => { btn.innerHTML = label; }, 1600);
+      };
+      const selectIt = () => {
+        const r = document.createRange(); r.selectNodeContents(el);
+        const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done(false);
+      };
+      try {
+        navigator.clipboard.writeText(text).then(() => done(true), selectIt);
+      } catch (e) { selectIt(); }
+    });
+  });
+
+  /* footer name always fills the row exactly */
+  const footName = $('.foot-name');
+  function fitFoot() {
+    if (!footName) return;
+    footName.style.fontSize = '';
+    const span = $(':scope > span[lang="' + lang + '"]', footName);
+    const w = span ? span.getBoundingClientRect().width : 0;
+    if (!w) return;
+    const fs = parseFloat(getComputedStyle(footName).fontSize);
+    footName.style.fontSize = Math.min(240, fs * (footName.clientWidth / w) * 0.985).toFixed(2) + 'px';
+  }
+  fitFoot();
+  window.addEventListener('resize', fitFoot);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitFoot);
+
+  /* ---------- language ---------- */
+  function syncLangButtons() {
+    $$('[data-set-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)));
+  }
+  function setLang(next) {
+    if (next === lang) return;
+    lang = next;
+    root.setAttribute('data-lang', next); root.lang = next;
+    try { localStorage.setItem('jg-lang', next); } catch (e) {}
+    syncLangButtons();
+    $$('[data-count]').forEach((el) => renderCount(el, el._st ? el._st.v : parseFloat(el.dataset.count)));
+    updateCaseNav();
+    fitFoot();
+    if (G) G.fromTo('main, .footer, .nav-links', { opacity: 0.25 }, { opacity: 1, duration: 0.6, ease: 'power2.out', clearProps: 'opacity' });
+    if (ST) requestAnimationFrame(() => ST.refresh());
+  }
+  syncLangButtons();
+  $$('[data-set-lang]').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.setLang)));
+  $$('[data-count]').forEach((el) => renderCount(el, parseFloat(el.dataset.count)));
+
+  /* ---------- anchors + mobile menu ---------- */
+  const menu = $('#menu'), menuBtn = $('.menu-btn');
+  function closeMenu() {
+    if (menu.hidden) return;
+    menu.hidden = true; menuBtn.setAttribute('aria-expanded', 'false');
+    if (lenis) lenis.start();
+  }
+  menuBtn.addEventListener('click', () => {
+    const open = menu.hidden;
+    menu.hidden = !open; menuBtn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (lenis) lenis.stop();
+      if (motion) {
+        G.fromTo(menu, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 0.8, ease: 'expo.out' });
+        G.fromTo($$('nav a > span', menu), { yPercent: 110 }, { yPercent: 0, duration: 1, ease: 'expo.out', stagger: 0.06, delay: 0.1 });
+      }
+    } else if (lenis) lenis.start();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+  function scrollToTarget(id) {
+    const t = id === 'top' ? 0 : document.getElementById(id);
+    if (t === null) return false;
+    if (lenis) lenis.scrollTo(t, { duration: 1.6, easing: (x) => 1 - Math.pow(1 - x, 4) });
+    else if (t === 0) window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    else t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    return true;
+  }
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1) || 'top';
+    closeMenu();
+    if (scrollToTarget(id)) e.preventDefault();
+  });
+  $$('[data-goto]').forEach((b) => b.addEventListener('click', () => scrollToTarget(b.dataset.goto)));
+
+  /* ---------- hero field (WebGL) ---------- */
+  const FRAG = `
+precision highp float;
+uniform vec2 uRes; uniform float uTime; uniform vec2 uMouse; uniform float uHeat; uniform float uScroll;
+vec2 hash2(vec2 p){ p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3))); return -1.0 + 2.0 * fract(sin(p) * 43758.5453123); }
+float gnoise(vec2 p){
+  vec2 i = floor(p); vec2 f = fract(p); vec2 u = f * f * (3.0 - 2.0 * f);
+  float a = dot(hash2(i), f);
+  float b = dot(hash2(i + vec2(1.0, 0.0)), f - vec2(1.0, 0.0));
+  float c = dot(hash2(i + vec2(0.0, 1.0)), f - vec2(0.0, 1.0));
+  float d = dot(hash2(i + vec2(1.0, 1.0)), f - vec2(1.0, 1.0));
+  return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
+}
+float fbm(vec2 p){
+  float v = 0.0; float a = 0.5; mat2 m = mat2(1.6, 1.2, -1.2, 1.6);
+  for (int i = 0; i < OCT; i++){ v += a * gnoise(p); p = m * p; a *= 0.5; }
+  return v;
+}
+float iso(float x, float px){ float g = abs(fract(x - 0.5) - 0.5); return 1.0 - smoothstep(0.0, px, g); }
+void main(){
+  vec2 frag = gl_FragCoord.xy;
+  vec2 p = (frag - 0.5 * uRes) / uRes.y;
+  float t = uTime * 0.035;
+  vec2 sp = p + vec2(0.0, uScroll * 0.45);
+  vec2 q = vec2(fbm(sp * 1.15 + vec2(0.0, t)), fbm(sp * 1.15 + vec2(5.2, 1.3) - t));
+  float f = fbm(sp * 0.85 + 1.5 * q + vec2(t * 0.5, -t * 0.3));
+  vec2 m = (uMouse - 0.5 * uRes) / uRes.y;
+  float d = length(p - m);
+  float heat = exp(-d * d * 7.5) * uHeat;
+  f += heat * 0.17;
+  float levels = 15.0;
+  float x = f * levels;
+#ifdef DERIV
+  float px = fwidth(x) * 1.15;
+  float pxm = fwidth(x / 5.0) * 1.5;
+#else
+  float px = levels * 2.2 / uRes.y;
+  float pxm = px * 0.3;
+#endif
+  float minor = iso(x, px);
+  float major = iso(x / 5.0, pxm);
+  vec3 bg = vec3(0.039, 0.051, 0.071);
+  vec3 porcelain = vec3(0.906, 0.925, 0.953);
+  vec3 amber = vec3(1.0, 0.627, 0.29);
+  vec3 hot = vec3(1.0, 0.92, 0.80);
+  float vign = smoothstep(1.35, 0.15, length(p * vec2(0.75, 1.0)));
+  float a = (minor * 0.085 + major * 0.24) * (0.35 + 0.65 * vign);
+  vec3 lc = mix(porcelain, amber, smoothstep(0.04, 0.55, heat));
+  lc = mix(lc, hot, smoothstep(0.7, 1.0, heat));
+  vec3 col = bg + lc * a * (1.0 + heat * 2.8);
+  col += amber * heat * 0.05;
+  col += porcelain * f * 0.02;
+  col = mix(bg, col, smoothstep(0.0, 0.32, frag.y / uRes.y));
+  float n = fract(sin(dot(frag, vec2(12.9898, 78.233)) + uTime * 0.7) * 43758.5453);
+  col += (n - 0.5) * 0.016;
+  gl_FragColor = vec4(col, 1.0);
+}`;
+
+  function initField() {
+    const canvas = $('.hero-canvas'), hero = $('.hero');
+    if (!canvas) return;
+    let gl = null;
+    try { gl = canvas.getContext('webgl', { antialias: false, alpha: false, depth: false, stencil: false, powerPreference: 'high-performance' }); } catch (e) {}
+    if (!gl) { hero.classList.add('no-gl'); return; }
+    const small = Math.min(window.innerWidth, window.innerHeight) < 700;
+    const deriv = gl.getExtension('OES_standard_derivatives');
+    const src = (deriv ? '#extension GL_OES_standard_derivatives : enable\n#define DERIV 1\n' : '') + '#define OCT ' + (small ? 4 : 5) + '\n' + FRAG;
+    const sh = (type, s) => { const o = gl.createShader(type); gl.shaderSource(o, s); gl.compileShader(o); return gl.getShaderParameter(o, gl.COMPILE_STATUS) ? o : null; };
+    const vs = sh(gl.VERTEX_SHADER, 'attribute vec2 p; void main(){ gl_Position = vec4(p, 0.0, 1.0); }');
+    const fs = sh(gl.FRAGMENT_SHADER, src);
+    if (!vs || !fs) { hero.classList.add('no-gl'); return; }
+    const prog = gl.createProgram(); gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { hero.classList.add('no-gl'); return; }
+    gl.useProgram(prog);
+    const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const U = {}; ['uRes', 'uTime', 'uMouse', 'uHeat', 'uScroll'].forEach((n) => { U[n] = gl.getUniformLocation(prog, n); });
+
+    const dpr = Math.min(window.devicePixelRatio || 1, small ? 1 : 1.5);
+    let W = 1, H = 1;
+    const resize = () => {
+      const r = canvas.getBoundingClientRect();
+      const w = Math.max(1, Math.round(r.width * dpr)), h = Math.max(1, Math.round(r.height * dpr));
+      if (w !== W || h !== H) { W = canvas.width = w; H = canvas.height = h; gl.viewport(0, 0, w, h); }
+    };
+    const mouse = { x: 0.7, y: 0.52, tx: 0.7, ty: 0.52 };
+    let heat = 0, heatT = 0.65, lastMove = -1e9, visible = true, raf = 0;
+    const t0 = performance.now();
+    window.addEventListener('pointermove', (e) => {
+      const r = canvas.getBoundingClientRect();
+      if (e.clientY < r.top || e.clientY > r.bottom) return;
+      mouse.tx = (e.clientX - r.left) / r.width; mouse.ty = 1 - (e.clientY - r.top) / r.height;
+      lastMove = performance.now(); heatT = 1;
+    }, { passive: true });
+
+    const draw = (now) => {
+      resize();
+      const t = (now - t0) / 1000;
+      if (now - lastMove > 2400) {
+        mouse.tx = 0.68 + 0.17 * Math.sin(t * 0.19); mouse.ty = 0.5 + 0.2 * Math.sin(t * 0.15 + 1.3); heatT = 0.62;
+      }
+      mouse.x += (mouse.tx - mouse.x) * 0.06; mouse.y += (mouse.ty - mouse.y) * 0.06;
+      heat += (heatT - heat) * 0.04;
+      const sc = Math.min(1, Math.max(0, window.scrollY / Math.max(1, hero.offsetHeight)));
+      gl.uniform2f(U.uRes, W, H); gl.uniform1f(U.uTime, t); gl.uniform2f(U.uMouse, mouse.x * W, mouse.y * H);
+      gl.uniform1f(U.uHeat, heat); gl.uniform1f(U.uScroll, sc);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    };
+    const loop = (now) => { if (!visible) { raf = 0; return; } draw(now); raf = requestAnimationFrame(loop); };
+    if (reduce) {
+      heat = 0.6; draw(performance.now());
+      window.addEventListener('resize', () => draw(performance.now()));
+      return;
+    }
+    const io = new IntersectionObserver((en) => {
+      visible = en[0].isIntersecting && !document.hidden;
+      if (visible && !raf) raf = requestAnimationFrame(loop);
+    });
+    io.observe(hero);
+    document.addEventListener('visibilitychange', () => {
+      visible = !document.hidden && hero.getBoundingClientRect().bottom > 0;
+      if (visible && !raf) raf = requestAnimationFrame(loop);
+    });
+    raf = requestAnimationFrame(loop);
+  }
+  initField();
+
+  /* ---------- case navigator ---------- */
+  const cases = $$('.case');
+  const caseNav = $('.case-nav');
+  let activeCase = 0;
+  function updateCaseNav() {
+    if (!caseNav || !cases.length) return;
+    const c = cases[activeCase];
+    $('.cn-count', caseNav).textContent = String(activeCase + 1).padStart(2, '0') + ' / ' + String(cases.length).padStart(2, '0');
+    $('.cn-name', caseNav).textContent = (lang === 'en' && c.dataset.caseEn) ? c.dataset.caseEn : c.dataset.case;
+    $$('.cn-dots button', caseNav).forEach((b, i) => b.classList.toggle('on', i === activeCase));
+  }
+  updateCaseNav();
+
+  /* ---------- no motion: static page ---------- */
+  const pre = $('.preloader');
+  if (!motion) {
+    if (pre) pre.remove();
+    if (ST && G) {
+      ST.create({ trigger: '.work', start: 'top 60%', end: 'bottom 40%', onToggle: (s) => caseNav.classList.toggle('visible', s.isActive) });
+      cases.forEach((c, i) => ST.create({ trigger: c, start: 'top 55%', end: 'bottom 55%', onToggle: (s) => { if (s.isActive) { activeCase = i; updateCaseNav(); } } }));
+      $$('.proc').forEach((p) => p.classList.add('on'));
+      $$('[data-process]').forEach((g) => g.style.setProperty('--p', 1));
+      $$('.pipeline .step, .flow-step').forEach((s) => s.classList.add('on'));
+    }
+    return;
+  }
+
+  /* ---------- motion setup ---------- */
+  G.registerPlugin(ST);
+  root.classList.add('motion');
+  if (window.Lenis) {
+    lenis = new window.Lenis({ lerp: 0.095, smoothWheel: true });
+    lenis.on('scroll', ST.update);
+    G.ticker.add((t) => lenis.raf(t * 1000));
+    G.ticker.lagSmoothing(0);
+  }
+
+  // split text up front so the preloader hides the reflow
+  const heroWords = $$('[data-hero-title]').flatMap((el) => splitWords(el));
+  const splitHeads = $$('[data-split]');
+  splitHeads.forEach(splitWords);
+  const scrubEls = $$('[data-scrub] > span');
+  scrubEls.forEach(splitWords);
+  const footChars = $$('[data-chars] > span').flatMap((el) => splitChars(el));
+  fitFoot();
+
+  G.set(heroWords, { yPercent: 118 });
+  G.set('[data-hero-fade], .hero-meta > div', { autoAlpha: 0, y: 24 });
+  G.set('.nav-inner', { autoAlpha: 0, y: -20 });
+
+  function heroIntro() {
+    const tl = G.timeline({ defaults: { ease: 'expo.out' } });
+    tl.fromTo('.hero-canvas', { autoAlpha: 0, scale: 1.08 }, { autoAlpha: 1, scale: 1, duration: 2.4, ease: 'power2.out' }, 0)
+      .to(heroWords, { yPercent: 0, duration: 1.5, stagger: 0.05 }, 0.05)
+      .to('[data-hero-fade]', { autoAlpha: 1, y: 0, duration: 1.2, stagger: 0.09 }, 0.4)
+      .to('.hero-meta > div', { autoAlpha: 1, y: 0, duration: 1, stagger: 0.07 }, 0.7)
+      .to('.nav-inner', { autoAlpha: 1, y: 0, duration: 1.1 }, 0.3);
+  }
+
+  function runPreloader(done) {
+    if (!pre || performance.now() > 4200) { if (pre) pre.remove(); done(); return; }
+    if (lenis) lenis.stop();
+    const num = $('.pl-num', pre), o = { v: 0 };
+    G.timeline({ onComplete: () => pre.remove() })
+      .to(o, { v: 100, duration: 1.2, ease: 'power2.inOut', onUpdate: () => { num.textContent = String(Math.round(o.v)).padStart(3, '0'); } }, 0)
+      .to($('.pl-bar i', pre), { scaleX: 1, duration: 1.2, ease: 'power2.inOut' }, 0)
+      .to($('.pl-name', pre), { yPercent: -30, autoAlpha: 0, duration: 0.7, ease: 'power3.in' }, 1.25)
+      .to(pre, { clipPath: 'inset(0% 0% 100% 0%)', duration: 1.05, ease: 'expo.inOut' }, 1.3)
+      .add(() => { if (lenis) lenis.start(); done(); }, 1.62);
+  }
+
+  /* hero parallax out */
+  G.to('.hero-content', { yPercent: -10, autoAlpha: 0.15, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  /* nav state + progress */
+  const nav = $('#nav'), bar = $('.progress');
+  ST.create({
+    start: 0, end: 'max',
+    onUpdate: (s) => {
+      const y = s.scroll();
+      nav.classList.toggle('scrolled', y > 40);
+      nav.classList.toggle('hide', s.direction === 1 && y > 420 && menu.hidden);
+      bar.style.transform = 'scaleX(' + s.progress.toFixed(4) + ')';
+    }
+  });
+
+  /* headings */
+  splitHeads.forEach((el) => {
+    G.from(el._words, { yPercent: 118, duration: 1.3, ease: 'expo.out', stagger: 0.045, scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+  });
+
+  /* statement: words light up as you read */
+  scrubEls.forEach((el) => {
+    G.set(el._words, { opacity: 0.16 });
+    G.to(el._words, { opacity: 1, ease: 'none', stagger: 0.1, scrollTrigger: { trigger: el, start: 'top 82%', end: 'bottom 48%', scrub: 0.6 } });
+  });
+
+  /* generic fade-up */
+  G.set('[data-reveal]', { autoAlpha: 0, y: 44 });
+  ST.batch('[data-reveal]', {
+    start: 'top 90%', once: true,
+    onEnter: (b) => G.to(b, { autoAlpha: 1, y: 0, duration: 1.15, ease: 'power3.out', stagger: 0.09, overwrite: true })
+  });
+
+  /* figures: clip reveal + inner parallax */
+  $$('.case-figs .frame, .card .frame').forEach((fr) => {
+    const img = $('.shot img', fr);
+    G.fromTo(fr, { clipPath: 'inset(10% 8% 10% 8% round 22px)' }, {
+      clipPath: 'inset(0% 0% 0% 0% round 14px)', ease: 'power2.out',
+      scrollTrigger: { trigger: fr, start: 'top 95%', end: 'top 40%', scrub: 0.8 }
+    });
+    if (img) G.fromTo(img, { scale: 1.12, yPercent: -2 }, { scale: 1.045, yPercent: 2, ease: 'none', scrollTrigger: { trigger: fr, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+  $$('[data-speed]').forEach((el) => {
+    G.fromTo(el, { yPercent: 22 }, { yPercent: -6, ease: 'none', scrollTrigger: { trigger: el.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+
+  /* counters (terminal rows count inside their own timeline) */
+  $$('[data-count]').filter((el) => !el.closest('[data-term]')).forEach((el) => {
+    const end = parseFloat(el.dataset.count);
+    el._st = { v: 0 }; renderCount(el, 0);
+    ST.create({
+      trigger: el, start: 'top 92%', once: true,
+      onEnter: () => G.to(el._st, { v: end, duration: end > 50 ? 2 : 1.4, ease: 'power3.out', onUpdate: () => renderCount(el, el._st.v) })
+    });
+  });
+
+  /* terminal */
+  $$('[data-term]').forEach((term) => {
+    const typed = $('.typed', term), text = typed.dataset.text, rows = $$('.term-row', term);
+    const nums = $$('[data-count]', term);
+    typed.textContent = '';
+    G.set(rows, { autoAlpha: 0, x: -10 });
+    G.set($$('.bar i', term), { scaleX: 0 });
+    nums.forEach((el) => { el._st = { v: 0 }; renderCount(el, 0); });
+    const tl = G.timeline({ scrollTrigger: { trigger: term, start: 'top 82%', once: true } });
+    const o = { n: 0 };
+    tl.to(o, { n: text.length, duration: 0.9, ease: 'none', onUpdate: () => { typed.textContent = text.slice(0, Math.round(o.n)); } })
+      .to(rows, { autoAlpha: 1, x: 0, duration: 0.5, stagger: 0.09, ease: 'power2.out' }, '+=0.15')
+      .to($$('.bar i', term), { scaleX: 1, duration: 1.1, stagger: 0.09, ease: 'expo.out' }, '<');
+    nums.forEach((el, i) => tl.to(el._st, { v: parseFloat(el.dataset.count), duration: 1.2, ease: 'power3.out', onUpdate: () => renderCount(el, el._st.v) }, 1.05 + i * 0.09));
+  });
+
+  /* pipeline + flow */
+  $$('[data-pipeline]').forEach((pl) => {
+    const steps = $$('.step', pl);
+    const tl = G.timeline({ scrollTrigger: { trigger: pl, start: 'top 88%', once: true } });
+    steps.forEach((s, i) => tl.add(() => s.classList.add('on'), i * 0.16));
+  });
+  $$('[data-flow]').forEach((fl) => {
+    const steps = $$('.flow-step', fl);
+    const tl = G.timeline({ scrollTrigger: { trigger: fl, start: 'top 80%', once: true } });
+    tl.from(steps, { autoAlpha: 0, x: 24, duration: 0.7, stagger: 0.1, ease: 'power3.out' });
+    steps.forEach((s, i) => tl.add(() => s.classList.add('on'), 0.4 + i * 0.22));
+  });
+
+  /* benchmark bars */
+  $$('[data-bench]').forEach((b) => {
+    G.from($$('.bar i', b), { scaleX: 0, duration: 1.4, stagger: 0.14, ease: 'expo.out', scrollTrigger: { trigger: b, start: 'top 88%', once: true } });
+  });
+
+  /* case navigator */
+  ST.create({ trigger: '.work .case', endTrigger: '#case-bot', start: 'top 70%', end: 'bottom 50%', onToggle: (s) => caseNav.classList.toggle('visible', s.isActive) });
+  cases.forEach((c, i) => ST.create({ trigger: c, start: 'top 55%', end: 'bottom 55%', onToggle: (s) => { if (s.isActive) { activeCase = i; updateCaseNav(); } } }));
+
+  /* web gallery: pinned horizontal scroll on wide screens */
+  const web = $('.web'), track = $('.web-track'), wbar = $('.web-progress i'), wcount = $('.web-count b');
+  const cards = $$('.web-card', track);
+  const mm = G.matchMedia();
+  mm.add('(min-width: 900px)', () => {
+    web.classList.add('is-pinned');
+    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth);
+    const tween = G.to(track, {
+      x: () => -dist(), ease: 'none',
+      scrollTrigger: {
+        trigger: web, start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.9, invalidateOnRefresh: true, anticipatePin: 1,
+        onUpdate: (s) => {
+          wbar.style.transform = 'scaleX(' + s.progress.toFixed(4) + ')';
+          wcount.textContent = String(Math.min(cards.length, Math.floor(s.progress * cards.length) + 1)).padStart(2, '0');
+        }
+      }
+    });
+    cards.forEach((card) => {
+      const img = $('img', card);
+      G.fromTo(img, { xPercent: -3, scale: 1.08 }, { xPercent: 3, scale: 1.08, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
+    });
+    return () => { web.classList.remove('is-pinned'); G.set(track, { clearProps: 'x' }); };
+  });
+  mm.add('(max-width: 899px)', () => {
+    const onScroll = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      const p = max > 0 ? track.scrollLeft / max : 0;
+      wbar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+      wcount.textContent = String(Math.min(cards.length, Math.round(p * (cards.length - 1)) + 1)).padStart(2, '0');
+    };
+    track.addEventListener('scroll', onScroll, { passive: true });
+    return () => track.removeEventListener('scroll', onScroll);
+  });
+
+  /* porcelain sheet rises over the gallery */
+  G.to('.web-inner', { scale: 0.94, autoAlpha: 0.35, ease: 'none', scrollTrigger: { trigger: '.sheet', start: 'top bottom', end: 'top 15%', scrub: true } });
+
+  /* process line */
+  $$('[data-process]').forEach((g) => {
+    const steps = $$('.proc', g);
+    G.fromTo(g, { '--p': 0 }, {
+      '--p': 1, ease: 'none',
+      scrollTrigger: {
+        trigger: g, start: 'top 78%', end: 'bottom 62%', scrub: 0.6,
+        onUpdate: (s) => steps.forEach((st, i) => st.classList.toggle('on', s.progress >= (i / Math.max(1, steps.length - 1)) - 0.02))
+      }
+    });
+  });
+
+  /* footer name */
+  G.from(footChars, { yPercent: 110, duration: 1.3, ease: 'expo.out', stagger: 0.025, scrollTrigger: { trigger: '.footer', start: 'top 92%', once: true } });
+
+  /* marquee driven by scroll velocity */
+  $$('.mq').forEach((el) => {
+    const tr = $('.mq-track', el), dir = el.dataset.dir === 'right' ? 1 : -1, base = parseFloat(el.dataset.speed || 0.5);
+    let x = dir > 0 ? -1 : 0, half = 1;
+    const measure = () => { half = tr.scrollWidth / 2 || 1; };
+    measure(); window.addEventListener('resize', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    G.ticker.add(() => {
+      const v = lenis ? lenis.velocity : 0;
+      const k = G.ticker.deltaRatio();
+      x += dir * (base + Math.min(Math.abs(v) * 0.4, 16)) * k;
+      if (x <= -half) x += half;
+      if (x > 0) x -= half;
+      tr.style.transform = 'translate3d(' + x.toFixed(2) + 'px,0,0)';
+    });
+  });
+
+  /* ---------- pointer-only niceties ---------- */
+  if (fine) {
+    const cur = $('.cursor'), dot = $('.cursor-dot', cur), ring = $('.cursor-ring', cur), lab = $('.cursor-label', cur);
+    const dx = G.quickSetter(dot, 'x', 'px'), dy = G.quickSetter(dot, 'y', 'px');
+    const rx = G.quickSetter(ring, 'x', 'px'), ry = G.quickSetter(ring, 'y', 'px');
+    const p = { x: window.innerWidth / 2, y: window.innerHeight / 2 }, r = { x: p.x, y: p.y };
+    window.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      p.x = e.clientX; p.y = e.clientY; dx(p.x); dy(p.y);
+      if (!cur.classList.contains('on')) { cur.classList.add('on'); root.classList.add('has-cursor'); }
+    }, { passive: true });
+    document.addEventListener('pointerleave', () => cur.classList.remove('on'));
+    G.ticker.add(() => {
+      const k = 1 - Math.pow(1 - 0.2, G.ticker.deltaRatio());
+      r.x += (p.x - r.x) * k; r.y += (p.y - r.y) * k; rx(r.x); ry(r.y);
+    });
+    document.addEventListener('pointerover', (e) => {
+      const t = e.target.closest('[data-cursor-ru], a, button');
+      if (!t) { cur.classList.remove('hover', 'label'); return; }
+      const txt = t.getAttribute('data-cursor-' + lang);
+      if (txt) { lab.textContent = txt; cur.classList.add('label'); cur.classList.remove('hover'); }
+      else { cur.classList.add('hover'); cur.classList.remove('label'); }
+    });
+
+    $$('[data-magnetic]').forEach((el) => {
+      const txt = $('.btn-text', el);
+      el.addEventListener('pointermove', (e) => {
+        const b = el.getBoundingClientRect();
+        const mx = e.clientX - b.left, my = e.clientY - b.top;
+        el.style.setProperty('--mx', mx + 'px'); el.style.setProperty('--my', my + 'px');
+        const ox = mx - b.width / 2, oy = my - b.height / 2;
+        G.to(el, { x: ox * 0.28, y: oy * 0.38, duration: 0.6, ease: 'power3.out', overwrite: 'auto' });
+        if (txt) G.to(txt, { x: ox * 0.12, y: oy * 0.14, duration: 0.6, ease: 'power3.out', overwrite: 'auto' });
+      });
+      el.addEventListener('pointerenter', (e) => {
+        const b = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - b.left) + 'px'); el.style.setProperty('--my', (e.clientY - b.top) + 'px');
+      });
+      el.addEventListener('pointerleave', () => {
+        G.to(el, { x: 0, y: 0, duration: 1.1, ease: 'elastic.out(1, 0.4)', overwrite: 'auto' });
+        if (txt) G.to(txt, { x: 0, y: 0, duration: 1.1, ease: 'elastic.out(1, 0.4)', overwrite: 'auto' });
+      });
+    });
+
+    $$('.tilt').forEach((el) => {
+      el.addEventListener('pointermove', (e) => {
+        const b = el.getBoundingClientRect();
+        const px = (e.clientX - b.left) / b.width, py = (e.clientY - b.top) / b.height;
+        el.style.setProperty('--gx', (px * 100).toFixed(1) + '%'); el.style.setProperty('--gy', (py * 100).toFixed(1) + '%');
+        G.to(el, { rotateY: (px - 0.5) * 7, rotateX: (0.5 - py) * 7, transformPerspective: 1000, duration: 0.7, ease: 'power3.out', overwrite: 'auto' });
+      });
+      el.addEventListener('pointerleave', () => G.to(el, { rotateX: 0, rotateY: 0, duration: 1, ease: 'elastic.out(1, 0.5)', overwrite: 'auto' }));
+    });
+
+    const list = $('[data-svc]'), pv = $('.svc-preview'), pimgs = $$('img', pv);
+    if (list && pv) {
+      const px = G.quickTo(pv, 'x', { duration: 0.7, ease: 'power3.out' }), py = G.quickTo(pv, 'y', { duration: 0.7, ease: 'power3.out' });
+      list.addEventListener('pointermove', (e) => { px(e.clientX + 28); py(e.clientY - 90); });
+      $$('.svc', list).forEach((row) => {
+        row.addEventListener('pointerenter', () => {
+          const i = +row.dataset.img;
+          pimgs.forEach((im, j) => im.classList.toggle('on', j === i));
+          G.to(pv, { autoAlpha: 1, scale: 1, rotate: -3, duration: 0.6, ease: 'expo.out', overwrite: 'auto' });
+        });
+      });
+      list.addEventListener('pointerleave', () => G.to(pv, { autoAlpha: 0, scale: 0.6, rotate: 0, duration: 0.45, ease: 'power3.in', overwrite: 'auto' }));
+    }
+  }
+
+  /* ---------- go ---------- */
+  runPreloader(heroIntro);
+  window.addEventListener('load', () => ST.refresh());
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ST.refresh());
+})();
+</script>
+</body>
+</html>
